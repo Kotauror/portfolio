@@ -11,6 +11,16 @@ a {
   color: white;
 }
 
+a:active {
+  background-color: #02808F;
+}
+
+dropdown-toggle:active {
+  background-color: #02808F;
+}
+
+
+/*
 a:hover {
   color: white;
 }
@@ -24,7 +34,12 @@ a:hover {
   background-color: #02808F !important;
   color: white;
 }
+*/
 
-.onclick {
-  background-color: #02808F !important;
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .nav>li>a:focus, .nav>li>a:hover {
+  background-color: #02808F;
+  color: white;
 }
+
+/* sprawdz co to focus */
+/* if sth is type a and is an imediate child of element with class open and is somewhere (gdyby był dziubek to by bylo bezposrednio under!!!! under class nav then...*/

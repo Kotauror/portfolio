@@ -2,8 +2,9 @@ $( document ).ready(function() {
 
   $("#navbar").load("navbar.html");
 
-  $(".dropdown-toggle").click(function(){
-    $('.dropdown-toggle').attr('class', 'onclick');
-  })
+  $(".simple_link").click(function(){
+    console.log("hehe")
+    $(".simple_link").toggleClass('onclick');
+  });
 
 })
