@@ -1,0 +1,30 @@
+body {
+  background-color: lightgrey;
+}
+
+.navbar {
+  background-color: #05678E;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+.dropdown-toggle:hover {
+  background-color: #02808F !important;
+  color: white;
+}
+
+.simple_link:hover {
+  background-color: #02808F !important;
+  color: white;
+}
+
+.onclick {
+  background-color: #02808F !important;
+}
