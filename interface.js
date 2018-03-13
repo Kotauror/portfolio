@@ -1,10 +1,13 @@
 $( document ).ready(function() {
 
-  $("#navbar").load("navbar.html");
+  $("#navbar").load("navbar.html").ready(function() {
 
-  $(".simple_link").click(function(){
-    console.log("hehe")
-    $(".simple_link").toggleClass('onclick');
-  });
+    $(".content").click(function(){
+      console.log('hehe')
+      $(".content").text('boris');
+    });
+
+  })
+
 
 })

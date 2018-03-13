@@ -3,8 +3,9 @@ body {
 }
 
 .navbar {
-  background-color: #05678E;
+  background-color: #ca3535;
   color: white;
+  font-family: Roboto;
 }
 
 a {
@@ -15,31 +16,33 @@ a:active {
   background-color: #02808F;
 }
 
+.dropdown {
+  border-right-style: solid;
+  border-right-width: 0.05em;
+  border-right-color: #40b575;
+}
+
 dropdown-toggle:active {
   background-color: #02808F;
 }
 
-
-/*
 a:hover {
-  color: white;
+  color: #40b575
 }
-
-.dropdown-toggle:hover {
-  background-color: #02808F !important;
-  color: white;
-}
-
-.simple_link:hover {
-  background-color: #02808F !important;
-  color: white;
-}
-*/
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .nav>li>a:focus, .nav>li>a:hover {
-  background-color: #02808F;
+  background-color: #40b575;
   color: white;
 }
 
-/* sprawdz co to focus */
-/* if sth is type a and is an imediate child of element with class open and is somewhere (gdyby był dziubek to by bylo bezposrednio under!!!! under class nav then...*/
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+}
