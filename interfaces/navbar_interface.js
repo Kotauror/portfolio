@@ -1,8 +1,11 @@
 $( document ).ready(function() {
 
   $(".boris").click(function(){
-    console.log('hehe')
-    $(".content").text('boris');
+    $(".description").load('projects/boris.html');
   });
+
+
+  // $("#navbar").load("navbar.html").ready(function() {
+
 
 })

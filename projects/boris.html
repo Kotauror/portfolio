@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Boris Bikes </div>
+      <div class="about"> A command line ruby application created as a weekly challange at week 1 of Makers Academy. </div>
+      <div class="technology">
+        <div class="frameworks"> programming language: Ruby, testing: Rspec </div>
+        <div class="how_to_run">  </div>
+        <div class="user_stories">
+          <h3> User Stories: </h3>
+
+          <p>As a person, </p>
+          So that I can use a bike, <br>
+          I'd like a docking station to release a bike. <br> <br>
+
+          As a person, <br>
+          So that I can use a good bike,<br>
+          I'd like to see if a bike is working<br><br>
+         </div>
+        <div class="model">
+          <div class="classes"> Classes:
+            <h1> Bike </h1>
+            <h2> methods: </h2>
+            <p1><li> 1) working? - tells if a bike is working. </li></p1>
+            <p1> 2) report - returns a string telling if the bike is working. </p1>
+            <h1> Docking Station </h1>
+            <h2> methods: </h2>
+            <p1> 1) @bikes - an array of bikes available at a station </p1>
+            <p1> 2) @capacity - capacity of a station </p1>
+            <p1> 3) release_bike - removes first possible working bike from bikes array</p1>
+            <p1> 4) dock - adds a bike to a docking station if there are free places</p1>
+            <p1> 5) count_of_broken_bikes - returns number of broken bikes at a station </p1>
+            <p1> 6) empty_station_of_broken_bikes - removes broken bikes from an array </p1>
+            <p1> 7) full? - checks if station is full </p1>
+            <p1> 8) empty? - checks if station is empty </p1>
+            <h1> Garage </h1>
+            <h2> methods: </h2>
+            <p1> 1) collection_of_bikes - array of bikes in the garage </p1>
+            <p1> 2) receive_bikes - picks bikes from van: adds them to collection and removes them from a van </p1>
+            <p1> 3) fix_bikes - changes the status of a bike to working.
+            <h1> Van </h1>
+            <h2> methods: </h2>
+            <p1> 1) collection_of_bikes - array of bikes in the van </p1>
+            <p1> 2) empty? - tells if van is empty </p1>
+            <p1> 3) pass_bikes - returns the collection of bikes </p1>
+            <p1> 4) delete_bikes - empties the array of bikes </p1>
+        </div>
+        <div class="example_of_use">
+          <ul>
+            <li>$ require './lib/bike' </li>
+            <li>=> true</li>
+            <li>$ require './lib/docking_station'</li>
+            <li>=> true</li>
+            <li>$ require './lib/garage'</li>
+            <li>=> true</li>
+            <li>$ require './lib/van'</li>
+            <li>=> true</li>
+            <li>$ bike = Bike.new</li>
+            <li> => #<Bike:0x007fd1eb91f4f0 @working=true></li>
+            <li>$ bike.report </li>
+            <li>=> "Bike is working" </li>
+            <li>$ station = DockingStation.new </li>
+            <li>=> #<DockingStation:0x007fd1ed04e1a8 @bikes=[], @capacity=20> </li>
+            <li>$ bike2 = Bike.new(false)</li>
+            <li> => #<Bike:0x007fd1eb9c17c8 @working=false> </li>
+            <li>$ station.dock(bike) </li>
+            <li> => [#<Bike:0x007fd1eb91f4f0 @working=true>] </li>
+            <li>$ station.dock(bik2) </li>
+            <li> => [#<Bike:0x007fd1eb91f4f0 @working=true>, #<Bike:0x007fd1eb9c17c8 @working=false] </li>
+            <li>$ van = Van.new </li>
+            <li> => #<Van:0x007fd1eb840c00 @collection_of_bikes=[]> </li>
+            <li>$ van.collect_bikes(station) </li>
+            <li> => [#<Bike:0x007fd1eb9c17c8 @working=false>] </li>
+            <li>$ garage = Garage.new </li>
+            <li> => #<Garage:0x007fd1eb972b00 @collection_of_bikes=[]> </li>
+            <li>$ garage.receive_bikes(van) </li>
+            <li> => [#<Bike:0x007fd1eb9c17c8 @working=false>] </li>
+            <li>$ van.collection_of_bikes </li>
+            <li> => [] </li>
+            <li>$ garage.collection_of_bikes </li>
+            <li> => [#<Bike:0x007fd1eb9c17c8 @working=false>] <li>
+            <li> $ garage.fix_bikes </li>
+            <li> => [#<Bike:0x007fd1eb9c17c8 @working=true>] </li>
+          </ul>
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>

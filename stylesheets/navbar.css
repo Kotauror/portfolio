@@ -1,5 +1,5 @@
 body {
-  background-color: lightgrey;
+  background-color: #eaeaea;
 }
 
 .navbar {
@@ -14,12 +14,6 @@ a {
 
 a:active {
   background-color: #02808F;
-}
-
-.dropdown {
-  border-right-style: solid;
-  border-right-width: 0.05em;
-  border-right-color: #40b575;
 }
 
 dropdown-toggle:active {
