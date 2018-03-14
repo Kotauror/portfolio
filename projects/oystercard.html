@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Oystercard </div>
+      <div class="about"> A command line ruby application created as a weekly challange at week 2 of Makers Academy, imitating the Oystercard system. </div>
+      <div class="frameworks"> Programming language: Ruby, testing: Rspec </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Use in irb <br>
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Class Oystercard </h1>
+            <h2> methods: </h2>
+            <p1><li> @balance - tells the balance of card, has a default value </li></p1>
+            <p1> <li> @journey_history - an array of all journeys. </p1>
+            <p1> <li> @current_journey - a current journey of card - after touch in. </p1>
+            <p1> <li> top_up(amount) - top up an oystercard </p1>
+            <p1> <li> touch_in(station) - enter a station </p1>
+            <p1> <li> touch_out(station) - exit a station </p1>
+            <p1> Private methods: </p1>
+            <p1> <li> no_touch_in_guard - checks if there was a touch in in the current journey </p1>
+            <p1> <li> no_touch_out_guard - checks if there was a touch out in the previous journey </p1>
+            <p1> <li> end_current_journey - sets @current_journey to nil </p1>
+            <p1> <li> save_journey - adds journey to @journey_history </p1>
+            <p1> <li> deduct(fare) - decreases the balance </p1>
+            <h1> Class Station </h1>
+            <h2> methods: </h2>
+            <p1> <li> @name - name of a station </p1>
+            <p1> <li> @zone - zone a station </p1>
+            <h1> Class Journey </h1>
+            <h2> methods: </h2>
+            <p1> <li> @entry_station - station of thouch in </p1>
+            <p1> <li> @exit_station - station of thouch out </p1>
+            <p1> <li> fare - tells a fare of a journey </p1>
+            <p1> Private method: </p1>
+            <p1> <li> calculate_fare - calculates the fare </p1>
+        </div>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
+          In order to use public transport <br>
+          As a customer <br>
+          I want money on my card <br><br>
+
+          In order to keep using public transport<br>
+          As a customer<br>
+          I want to add money to my card<br><br>
+
+          In order to protect my money<br>
+          As a customer<br>
+          I don't want to put too much money on my card<br><br>
+
+          In order to pay for my journey<br>
+          As a customer<br>
+          I need my fare deducted from my card<br><br>
+
+          In order to get through the barriers<br>
+          As a customer<br>
+          I need to touch in and out<br><br>
+
+          In order to pay for my journey<br>
+          As a customer<br>
+          I need to have the minimum amount for a single journey<br><br>
+
+          In order to pay for my journey<br>
+          As a customer<br>
+          I need to pay for my journey when it's complete<br><br>
+
+          In order to pay for my journey<br>
+          As a customer<br>
+          I need to know where I've travelled from<br><br>
+
+          In order to know where I have been<br>
+          As a customer<br>
+          I want to see to all my previous trips<br><br>
+
+          In order to know how far I have travelled<br>
+          As a customer<br>
+          I want to know what zone a station is in<br><br>
+
+          In order to be charged correctly<br>
+          As a customer<br>
+          I need a penalty charge deducted if I fail to touch in or out<br><br>
+
+          In order to be charged the correct amount<br>
+          As a customer<br>
+          I need to have the correct fare calculated<br><br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <ul>
+            <li>$ require './lib/oystercard' </li>
+            <li>=> true</li>
+            <li>$ require './lib/journey'</li>
+            <li>=> true</li>
+            <li>$ require './lib/station'</li>
+            <li>=> true</li>
+            <li>$ card = Oystercard.new </li>
+            <li> => # &lt Oystercard:0x00007f8a3c8bee30 @balance=0, @journey_history=[], @current_journey=nil &gt </li>
+            <li>$ card.top_up(50) </li>
+            <li>=> 50 </li>
+            <li>$ station = Station.new("Farrington", 1) </li>
+            <li>=> # &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt </li>
+            <li>$ card.touch_in(station) </li>
+            <li> => # &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt </li>
+            <li>$ station2 = Station.new("Camden", 2) </li>
+            <li> => [# &lt Station:0x00007f8a3c8a1ec0 @name="Camden", @zone=2 &gt ] </li>
+            <li>$ card.touch_out(station2) </li>
+            <li> => nil </li>
+            <li>$ card.balance </li>
+            <li> => 48       ////////// normal fare of 2p was deducted (compele journey - touch in + touch out) </li>
+            <li>$ card.journey_history </li>
+            <li> => [# &lt Journey:0x00007f8a3d153000 @entry_station=# &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt, @exit_station=# &lt Station:0x00007f8a3c8a1ec0 @name="Camden", @zone=2 &gt ] </li>
+            <li>$ card.touch_out(station2) </li>
+            <li> => nil </li>
+            <li>$ card.balance </li>
+            <li> => 42     ////////// penalty fare of 6p was deducted (incompele journey - touch out without touch in)</li>
+            <li>$ card.touch_in(station) </li>
+            <li> => [# &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt ] </li>
+            <li>$ card.touch_out(station2) </li>
+            <li> => nil </li>
+            <li>$ card.balance </li>
+            <li> => 40 </li>      ////////// normal fare of 2p was deducted (compele journey - touch in + touch out)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>

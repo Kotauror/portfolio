@@ -9,13 +9,52 @@
   <body>
     <div class="general">
       <div class="header"> Boris Bikes </div>
-      <div class="about"> A command line ruby application created as a weekly challange at week 1 of Makers Academy. </div>
+      <div class="about"> A command line ruby application created as a weekly challange at week 1 of Makers Academy, imitating the Santander Bikes system. </div>
+      <div class="frameworks"> Programming language: Ruby, testing: Rspec </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
       <div class="technology">
-        <div class="frameworks"> programming language: Ruby, testing: Rspec </div>
-        <div class="how_to_run">  </div>
-        <div class="user_stories">
-          <h3> User Stories: </h3>
-
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Use in irb <br>
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Class Bike </h1>
+            <h2> methods: </h2>
+            <p1><li> working? - tells if a bike is working. </li></p1>
+            <p1> <li> report - returns a string telling if the bike is working. </p1>
+            <h1> Class Docking Station </h1>
+            <h2> methods: </h2>
+            <p1> <li> @bikes - an array of bikes available at a station </p1>
+            <p1> <li> @capacity - capacity of a station </p1>
+            <p1> <li> release_bike - removes first possible working bike from bikes array</p1>
+            <p1> <li> dock - adds a bike to a docking station if there are free places</p1>
+            <p1> <li> count_of_broken_bikes - returns number of broken bikes at a station </p1>
+            <p1> <li> empty_station_of_broken_bikes - removes broken bikes from an array </p1>
+            <p1> <li> full? - checks if station is full </p1>
+            <p1> <li> empty? - checks if station is empty </p1>
+            <h1> Class Garage </h1>
+            <h2> methods: </h2>
+            <p1> <li> collection_of_bikes - array of bikes in the garage </p1>
+            <p1> <li> receive_bikes - picks bikes from van: adds them to collection and removes them from a van </p1>
+            <p1> <li> fix_bikes - changes the status of a bike to working.
+            <h1> Class Van </h1>
+            <h2> methods: </h2>
+            <p1> <li> collection_of_bikes - array of bikes in the van </p1>
+            <p1> <li> empty? - tells if van is empty </p1>
+            <p1> <li> pass_bikes - returns the collection of bikes </p1>
+            <p1> <li> delete_bikes - empties the array of bikes </p1>
+        </div>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
           As a person, <br>
           So that I can use a bike, <br>
           I'd like a docking station to release a bike. <br> <br>
@@ -23,37 +62,53 @@
           As a person, <br>
           So that I can use a good bike,<br>
           I'd like to see if a bike is working<br><br>
-         </div>
-        <div class="model">
-          <div class="classes"> Classes:
-            <h1> Bike </h1>
-            <h2> methods: </h2>
-            <p1><li> 1) working? - tells if a bike is working. </li></p1>
-            <p1> 2) report - returns a string telling if the bike is working. </p1>
-            <h1> Docking Station </h1>
-            <h2> methods: </h2>
-            <p1> 1) @bikes - an array of bikes available at a station </p1>
-            <p1> 2) @capacity - capacity of a station </p1>
-            <p1> 3) release_bike - removes first possible working bike from bikes array</p1>
-            <p1> 4) dock - adds a bike to a docking station if there are free places</p1>
-            <p1> 5) count_of_broken_bikes - returns number of broken bikes at a station </p1>
-            <p1> 6) empty_station_of_broken_bikes - removes broken bikes from an array </p1>
-            <p1> 7) full? - checks if station is full </p1>
-            <p1> 8) empty? - checks if station is empty </p1>
-            <h1> Garage </h1>
-            <h2> methods: </h2>
-            <p1> 1) collection_of_bikes - array of bikes in the garage </p1>
-            <p1> 2) receive_bikes - picks bikes from van: adds them to collection and removes them from a van </p1>
-            <p1> 3) fix_bikes - changes the status of a bike to working.
-            <h1> Van </h1>
-            <h2> methods: </h2>
-            <p1> 1) collection_of_bikes - array of bikes in the van </p1>
-            <p1> 2) empty? - tells if van is empty </p1>
-            <p1> 3) pass_bikes - returns the collection of bikes </p1>
-            <p1> 4) delete_bikes - empties the array of bikes </p1>
+
+          As a member of the public <br>
+          So I can return bikes I've hired <br>
+          I want to dock my bike at the docking station <br><br>
+
+          As a member of the public <br>
+          So I can decide whether to use the docking station <br>
+          I want to see a bike that has been docked <br><br>
+
+          As a member of the public, <br>
+          So that I am not confused and charged unnecessarily, <br>
+          I'd like docking stations not to release bikes when there are none available. <br><br>
+
+          As a maintainer of the system, <br>
+          So that I can control the distribution of bikes, <br>
+          I'd like docking stations not to accept more bikes than their capacity. <br><br>
+
+          As a system maintainer,<br>
+          So that I can plan the distribution of bikes,<br>
+          I want a docking station to have a default capacity of 20 bikes.<br><br>
+
+          As a system maintainer, <br>
+          So that busy areas can be served more effectively, <br>
+          I want to be able to specify a larger capacity when necessary. <br><br>
+
+          As a member of the public, <br>
+          So that I reduce the chance of getting a broken bike in future, <br>
+          I'd like to report a bike as broken when I return it. <br> <br>
+
+          As a maintainer of the system, <br>
+          So that I can manage broken bikes and not disappoint users, <br>
+          I'd like docking stations not to release broken bikes. <br> <br>
+
+          As a maintainer of the system, <br>
+          So that I can manage broken bikes and not disappoint users, <br>
+          I'd like docking stations to accept returning bikes (broken or not). <br> <br>
+
+          As a maintainer of the system,<br>
+          So that I can manage broken bikes and not disappoint users,<br>
+          I'd like vans to take broken bikes from docking stations and deliver them to garages to be fixed. <br><br>
+
+          As a maintainer of the system,<br>
+          So that I can manage broken bikes and not disappoint users,<br>
+          I'd like vans to collect working bikes from garages and distribute them to docking stations.<br>
         </div>
-        <div class="example_of_use">
-          Example of Use:
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
           <ul>
             <li>$ require './lib/bike' </li>
             <li>=> true</li>

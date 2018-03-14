@@ -12,15 +12,64 @@
   margin-bottom: 1em;
 }
 
+.frameworks {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.shortcut {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0.05em;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.sc {
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.sclink {
+  font-size: 1.05em;
+  color: black !important;
+}
+
+.sc:hover {
+  background-color: #40b575;
+}
+
+
 .technology {
+  font-family: Roboto;
   width: 90%;
   margin-left: 5%;
 }
 
-.user_stories {
+
+#user_stories {
+  padding: 2em;
   background-color: lightgrey;
 }
 
-.example_of_use {
+#example_of_use {
   background-color: lightgrey;
+}
+
+h1 {
+  font-size: 1.3em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  background-color: #e8817d82;
+}
+
+p1 {
+  font-size: 1em;
 }
