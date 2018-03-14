@@ -8,6 +8,10 @@ $( document ).ready(function() {
     $(".description").load('projects/oystercard.html');
   });
 
+  $(".battle").click(function(){
+    $(".description").load('projects/battle.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });

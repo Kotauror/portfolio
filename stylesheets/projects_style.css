@@ -35,6 +35,7 @@
 .sclink {
   font-size: 1.05em;
   color: black !important;
+  text-decoration: underline !important;
 }
 
 .sc:hover {
@@ -46,6 +47,11 @@
   font-family: Roboto;
   width: 90%;
   margin-left: 5%;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 
