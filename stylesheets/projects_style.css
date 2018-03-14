@@ -12,6 +12,15 @@
   margin-bottom: 1em;
 }
 
+.technology {
+  width: 90%;
+  margin-left: 5%;
+}
+
 .user_stories {
+  background-color: lightgrey;
+}
+
+.example_of_use {
   background-color: lightgrey;
 }

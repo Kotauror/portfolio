@@ -4,8 +4,8 @@ $( document ).ready(function() {
     $(".description").load('projects/boris.html');
   });
 
-
-  // $("#navbar").load("navbar.html").ready(function() {
-
+  $(".navbar-brand").click(function(){
+    $(".description").text('thank you!');
+  });
 
 })
