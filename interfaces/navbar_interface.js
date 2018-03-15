@@ -48,6 +48,11 @@ $( document ).ready(function() {
     $(".description").load('projects/rps.html');
   });
 
+  $(".chitter").click(function(){
+    $(".description").load('projects/chitter.html');
+  });
+
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });

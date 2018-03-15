@@ -48,6 +48,14 @@
   background-color: #40b575;
 }
 
+.website_link:link{
+  color: darkred;
+}
+
+.website_link:visited {
+  color: darkred;
+}
+
 
 .technology {
   font-family: Roboto;
@@ -60,7 +68,6 @@
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
 
 #user_stories {
   padding: 2em;

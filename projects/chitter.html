@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Chitter - a Twitter clone [Solo Project]</div>
+      <div class="about"> A ruby application created as a weekend challange at the 4th weekend of Makers Academy.<br>Sign up - log in - write peeps - comment peeps - log out. </div>
+      <div class="frameworks">Front-end: CSS, HTML,<br>Back-end: Ruby, SQL,<br>Testing: Rspec, <br>Database: Postgresql,<br>Framework: Sinatra </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          LOCALY: <br>
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Run bundle <br>
+          - Run $ rackup <br><br>
+          ONLINE: <br>
+          - <a href="https://tweet-chit.herokuapp.com/" class="website_link"> tweet-chit.herokuapp.com </a>
+
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Class User </h1>
+            <h2> methods: </h2>
+            <p1><li> @id - id of a user. </li></p1>
+            <p1><li> @name - name of a name. </li></p1>
+            <p1><li> @username - username of a user. </li></p1>
+            <p1><li> @email - email of a user. </li></p1>
+            <p1><li> @password - password of a user. </li></p1>
+            <p1> <li> self.create - puts a user to a database if data are valid. </p1>
+            <p1> <li> self.email_in_use?(email) - checks if email is already in the database. </p1>
+            <p1> <li> self.username_in_use?(username) - checks if username is already in the database. </p1>
+            <p1> <li> self.self.find_user_by_id(id) - gets a user from a database according to a given id. </p1>
+            <p1> <li> self.valid? - checks is length of provided sing up data is long enough. </p1>
+            <p1> <li> self.instanciate(username) - creates a new instance of User class. </p1>
+            <p1> <li> self.matching_data(username, password) - checks if username matches the password. </p1>
+            <h1> Class Peep </h1>
+            <h2> methods: </h2>
+            <p1><li> @id - id of a peep. </li></p1>
+            <p1><li> @text - text of a peep. </li></p1>
+            <p1><li> @author - author of a peep. </li></p1>
+            <p1><li> @date - date of peep. </li></p1>
+            <p1> <li> self.all - gets all peeps from the database. </p1>
+            <p1> <li> self.create(text, author) - creates a new peep and saves it in the database. </p1>
+            <p1> <li> self.in_limit?(text) - checks if a peep is not too long. </p1>
+            <h1> Class Flash </h1>
+            <h2> methods: </h2>
+            <p1><li> self.welcome(name) - welcomes a user </li></p1>
+            <p1><li> self.long_peep - tells that peep is too long </li></p1>
+            <p1><li> self.no_name - tells that name wasn't provided </li></p1>
+            <p1><li> email_in_use - tells that email is in use</li></p1>
+            <p1><li> self.username_in_use - tells that username is in use </li></p1>
+            <p1><li> self.too_short - ask to type at least 4 characters in sign up </li></p1>
+            <p1><li> self.after_log_in(name) - welcomes after log in </li></p1>
+            <p1><li> self.no_match - tells that username doesn't match password </li></p1>
+            <p1><li> self.after_log_out - says bye after log out </li></p1>
+            <p1><li> self.thanks_for_comment - thanks for commenting </li></p1>
+            <p1><li> self.no_id - tells that there is no peep with a given id</li></p1>
+            <h1> Class DatabaseConnection </h1>
+            <h2> methods: </h2>
+            <p1> <li> self.setup(database) - creates a connection using PG gem </p1>
+            <p1> <li> self.connection - returns the connection </p1>
+            <p1> <li> self.query(sql_string) - a skeleton for writing SQL commands </p1>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
+          STRAIGHT UP <br>
+<br>
+          As a Maker<br>
+          So that I can let people know what I am doing  <br>
+          I want to post a message (peep) to chitter<br><br>
+
+          As a maker<br>
+          So that I can see what others are saying  <br>
+          I want to see all peeps in reverse chronological order<br><br>
+
+          As a Maker<br>
+          So that I can better appreciate the context of a peep<br>
+          I want to see the time at which it was made<br><br>
+
+          As a Maker<br>
+          So that I can post messages on Chitter as me<br>
+          I want to sign up for Chitter<br><br>
+
+          HARDER
+
+          As a Maker<br>
+          So that only I can post messages on Chitter as me<br>
+          I want to log in to Chitter<br><br>
+
+          As a Maker<br>
+          So that I can avoid others posting messages on Chitter as me<br>
+          I want to log out of Chitter<br><br>
+
+          As a Maker<br>
+          So that I can enjoy Chitter more<br>
+          I want to comment the Peeps<br><br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <img src="https://image.ibb.co/mMZiXx/Zrzut_ekranu_2018_03_15_o_22_21_29.png" class="single_image">
+          <img src="https://image.ibb.co/h6Kvec/Zrzut_ekranu_2018_03_15_o_22_21_36.png" class="single_image">
+          <img src="https://image.ibb.co/e2XbkH/Zrzut_ekranu_2018_03_15_o_22_22_04.png" class="single_image">
+          <img src="https://image.ibb.co/gV85ec/Zrzut_ekranu_2018_03_15_o_22_22_09.png" class="single_image">
+          <img src="https://image.ibb.co/c0Ycsx/Zrzut_ekranu_2018_03_15_o_22_24_58.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>
