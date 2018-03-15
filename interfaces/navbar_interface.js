@@ -28,6 +28,11 @@ $( document ).ready(function() {
     $(".description").load('projects/thermostat.html');
   });
 
+  $(".moist").click(function(){
+    $(".description").load('projects/moist.html');
+  });
+
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });
