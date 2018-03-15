@@ -1,12 +1,15 @@
-.header {
-  margin-top: 1.5em;
+html {
   font-family: Roboto;
-  font-size: 2em;
+}
+
+.header {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 2.2em;
   text-align: center;
 }
 
 .about {
-  font-family: Roboto;
   font-size: 1.3em;
   text-align: center;
   margin-bottom: 1em;
@@ -18,22 +21,26 @@
   border-style: solid;
   border-width: 0.2em;
   width: fit-content;
+  margin-top: 2em;
   margin-left: auto;
+  margin-bottom: 1em;
   margin-right: auto;
   padding: 0.5em;
+  background-color: #81d497;
+  border-color: #5da571;
 }
 
 .shortcut {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 0.05em;
-  width: 50%;
-  margin-left: 25%;
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 4em;
 }
 
 .sc {
   text-align: center;
-  font-weight: bolder;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
@@ -42,10 +49,6 @@
   font-size: 1.05em;
   color: black !important;
   text-decoration: underline !important;
-}
-
-.sc:hover {
-  background-color: #40b575;
 }
 
 .website_link:link{
@@ -64,11 +67,10 @@
 }
 
 .single_class {
-  
+
 }
 
 .technology {
-  font-family: Roboto;
   width: 90%;
   margin-left: 5%;
 }
@@ -97,7 +99,7 @@ h2 {
 }
 
 h3 {
-background: linear-gradient(to right, #cb3b3680, #eaeaea80);
+background-color: #cb3b3680;
 padding: 0.5em;
 }
 
