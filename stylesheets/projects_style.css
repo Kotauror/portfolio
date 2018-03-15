@@ -87,7 +87,8 @@ h2 {
 }
 
 h3 {
-  background-color: #e8817d82;
+background: linear-gradient(to right, #cb3b3680, #eaeaea80);
+padding: 0.5em;
 }
 
 p1 {
