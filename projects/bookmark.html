@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Bookmark Manager [Pair Programming]</div>
+      <div class="about"> A ruby application created as a weekly challange at week 4 of Makers Academy.<br>Collects bookmarks, allows adding comments and tags to them. </div>
+      <div class="frameworks"> Programming language: Ruby, SQL testing: Rspec, framework: Postgresql </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Run bundle <br>
+          - Run $ rackup <br>
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Class Link </h1>
+            <h2> methods: </h2>
+            <p1><li> @id - id of a comment. </li></p1>
+            <p1><li> @url - url of a bookmark. </li></p1>
+            <p1><li> @title - title of bookmark. </li></p1>
+            <p1> <li> self.all - gets all bookmarks from the one-to-many database. </p1>
+            <p1> <li> self.add - creates a new bookmark and saves it in the database. </p1>
+            <p1> <li> self.delete - deletes bookmark from the database. </p1>
+            <p1> <li> self.update - updates a bookmark in the database. </p1>
+            <p1> <li> self.is_url?(url) - cheks if provided link starts with www or http://. </p1>
+            <p1> <li> self.is_title?(title) - cheks if database contains a title </p1>
+            <h1> Class Comment </h1>
+            <h2> methods: </h2>
+            <p1><li> @id - id of a comment. </li></p1>
+            <p1><li> @text - text of a comment. </li></p1>
+            <p1><li> @link_id - id of a bookmark to which the comment refers. </li></p1>
+            <p1> <li> self.all - gets all comments from the database. </p1>
+            <p1> <li> self.add - creates a new comment and saves it in the database. </p1>
+            <p1> <li> self.is_id?(id) - checks if an id of a bookmark exists. </p1>
+            <h1> Class Tag </h1>
+            <h2> methods: </h2>
+            <p1><li> @id - id of a tag. </li></p1>
+            <p1><li> @content - content of a tag. </li></p1>
+            <p1> <li> self.all_pairs - gets all bookmark-tag pairs from the many-to-many database. </p1>
+            <p1> <li> self.all_tags - gets all tags from the database. </p1>
+            <p1> <li> self.add_to_tags(tag) - adds a tag to tags database. </p1>
+            <p1> <li> self.add_to_link_tags(link_id, tag_id) - adds a pair to many-to-many database </p1>
+            <h1> Class DatabaseConnection </h1>
+            <h2> methods: </h2>
+            <p1> <li> self.setup(database) - creates a connection using PG gem </p1>
+            <p1> <li> self.connection - returns the connection </p1>
+            <p1> <li> self.query(sql_string) - a skeleton for writing SQL commands </p1>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
+          As a time-pressed user <br>
+          So that I can quickly go to web sites I regularly visit<br>
+          I would like to see a list of links on the homepage<br><br>
+
+          As a time-pressed user<br>
+          So that I can quickly find web sites I recently bookmarked<br>
+          I would like to see links in descending chronological order<br><br>
+
+          As a time-pressed user<br>
+          So that I can save a website<br>
+          I would like to add the site's address and title to my bookmark manager<br><br>
+
+          As a time-pressed user<br>
+          So that I can organise my many links into different categories for ease of search<br>
+          I would like to add tags to the links in my bookmark manager<br><br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <div id="images">
+            <img src="https://image.ibb.co/hKDvCx/Zrzut_ekranu_2018_03_15_o_13_45_25.png" width="600em" height="300em">
+            <img src="https://image.ibb.co/d8uDzc/Zrzut_ekranu_2018_03_15_o_13_45_36.png" width="600em" height="300em">
+            <img src="https://image.ibb.co/eKaQCx/Zrzut_ekranu_2018_03_15_o_13_45_51_1.png" width="600em" height="300em">
+            <img src="https://preview.ibb.co/n6Qssx/Zrzut_ekranu_2018_03_15_o_13_46_07.png" width="600em" height="300em">
+          </div>
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>
