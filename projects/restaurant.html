@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Takeaway restaurant simulator [Own Project]</div>
+      <div class="about"> A ruby program created as a weekend challange at the 2nd weekend of Makers Academy.<br>Order food and receive a SMS confirmation. </div>
+      <div class="frameworks"> Back-end: Ruby,<br>Testing: Rspec </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Run bundle <br>
+          - Use in irb <br>
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Class Restaurant </h1>
+            <h2> methods: </h2>
+            <p1><li> @menu - array of available dishes. </li></p1>
+            <p1> <li> create_dish(name, price) - create a dish. </p1>
+            <p1> <li> display_menu - shows a menu in a structured way. </p1>
+            <p1> <li> create_order(dish_list, total_number) - creates an order according to the names of dishes and a total number of dishes diven by the client. The total number is used to confirm that the user will receive a correct number of dishes. </p1>
+            <h1> Class Dish </h1>
+            <h2> method: </h2>
+            <p1> <li> @details - hash having a name and a price of a dish. </p1>
+            <h1> Class Order </h1>
+            <h2> methods: </h2>
+            <p1> <li> @list_of_items - list of dishes in an order. </p1>
+            <p1> <li> @total_number - total number of ordered dishes given by the user. </p1>
+            <p1> <li> add_items(name, price, amount) - adds dishes to the list_of_items. </p1>
+            <p1> <li> order_info - informs of the final price and number of dishes. </p1>
+            <p1> <li> count_final_price - counts final price. </p1>
+            <p1> <li> count_dishes - counts number of dishes in user's order. </p1>
+            <p1> <li> send_order - sends order if the number of dishes is correct. Creates a new Message. </p1>
+            <h1> Class Message </h1>
+            <h2> methods: </h2>
+            <p1> <li> creates a new Message with ETA. </p1>
+        </div>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
+          As a customer <br>
+          So that I can check if I want to order something<br>
+          I would like to see a list of dishes with prices<br><br>
+
+          As a customer<br>
+          So that I can order the meal I want<br>
+          I would like to be able to select some number of several available dishes<br><br>
+
+          As a customer<br>
+          So that I can verify that my order is correct<br>
+          I would like to check that the total I have been given matches the sum of the various dishes in my order<br><br>
+
+          As a customer<br>
+          So that I am reassured that my order will be delivered on time<br>
+          I would like to receive a text such as "Thank you! Your order was placed and will be delivered before 18:52" after I have ordered<br><br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <ul>
+            <li>$ require './lib/restaurant' </li>
+            <li>=> true</li>
+            <li>$ restaurant = Restaurant.new</li>
+            <li> => # &lt Restaurant:0x00007fce0c5bf8d8 @menu=[] &gt </li>
+            <li>$ restaurant.create_dish("chicken", 10)</li>
+            <li>=> [# &lt Dish:0x00007fce0c5b6be8 @details={:name=>"chicken", :price=>10} &gt ]</li>
+            <li>$ restaurant.create_dish("beef", 30) </li>
+            <li>=> [# &lt Dish:0x00007fce0c5b6be8 @details={:name=>"chicken", :price=>10} &gt , &lt Dish:0x00007fce0c5b2520 @details={:name=>"beef", :price=>30} &gt ]</li>
+            <li>$ restaurant.display_menu </li>
+            <li> - chicken | 10 pounds <br>
+            - beef | 30 pounds<br>
+          => [# &lt Dish:0x00007fce0c5b6be8 @details={:name=>"chicken", :price=>10} &gt , &lt Dish:0x00007fce0c5b2520 @details={:name=>"beef", :price=>30} &gt ]</li>
+            <li>$ justine = restaurant.create_order([{name: "chicken", amount: 6}, {name:"beef", amount: 3}], 9) </li>
+            => # &lt Order:0x00007fce0c529d60 @list_of_items=[{:name=>"chicken", :price=>10, :amount=>6}, {:name=>"beef", :price=>30, :amount=>3}], @total_number=9 &gt
+            <li>$ justine.order_info </li>
+            <li> Final price: 150 <br>
+            Final number of dishes 9<br>
+             => nil </li>
+            <li>$ justine.send_order </li>
+            In a minute, you should receive a SMS confirmation of your order <br>
+            => # &lt Message:0x00007fce0c5aa898 &gt
+          </ul>
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>

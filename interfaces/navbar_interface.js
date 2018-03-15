@@ -40,6 +40,11 @@ $( document ).ready(function() {
     $(".description").load('projects/airport.html');
   });
 
+  $(".restaurant").click(function(){
+    $(".description").load('projects/restaurant.html');
+  });
+
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });
