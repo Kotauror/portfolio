@@ -56,6 +56,16 @@
   color: darkred;
 }
 
+.classes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  padding-left: 10%;
+}
+
+.single_class {
+  
+}
 
 .technology {
   font-family: Roboto;

@@ -31,23 +31,27 @@
         <div class="model">
           <h3> Design of code: </h3>
           <div id="classes">
-            <h1> Class Game </h1>
-            <h2> methods: </h2>
-            <p1><li> self.create - creates a new game </li></p1>
-            <p1> <li> self.instance - returns an instance of game created in self.create </p1>
-            <p1><li> @players - players of a current game </li></p1>
-            <p1><li> @current_turn - tells which player has a turn </li></p1>
-            <p1><li> attack(player) - attacked player receives damage </li></p1>
-            <p1><li> heal(player) - healing player receives additionl points of life </li></p1>
-            <p1><li> switch_turns - changes the value of @current_turn </li></p1>
-            <p1><li> defending_player - returns the player which is currently in the defence </li></p1>
-            <p1><li> game_over? - tells if the game is still on </li></p1>
-            <h1> Class Player </h1>
-            <h2> methods: </h2>
-            <p1> <li> @name - name </p1>
-            <p1> <li> @hp - hitpoints (100 by default) </p1>
-            <p1> <li> receive_dagame - decrease the hp by random number 1-20 </p1>
-            <p1> <li> heal - increase the hp by random number 1-10 </p1>
+            <div class="single_class">
+              <h1> Class Game </h1>
+              <h2> methods: </h2>
+              <p1><li> self.create - creates a new game </li></p1>
+              <p1> <li> self.instance - returns an instance of game created in self.create </p1>
+              <p1><li> @players - players of a current game </li></p1>
+              <p1><li> @current_turn - tells which player has a turn </li></p1>
+              <p1><li> attack(player) - attacked player receives damage </li></p1>
+              <p1><li> heal(player) - healing player receives additionl points of life </li></p1>
+              <p1><li> switch_turns - changes the value of @current_turn </li></p1>
+              <p1><li> defending_player - returns the player which is currently in the defence </li></p1>
+              <p1><li> game_over? - tells if the game is still on </li></p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Player </h1>
+              <h2> methods: </h2>
+              <p1> <li> @name - name </p1>
+              <p1> <li> @hp - hitpoints (100 by default) </p1>
+              <p1> <li> receive_dagame - decrease the hp by random number 1-20 </p1>
+              <p1> <li> heal - increase the hp by random number 1-10 </p1>
+            </div>
         <h3> User Stories: </h3>
         <div id="user_stories">
           As two Players, <br>

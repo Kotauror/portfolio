@@ -28,27 +28,35 @@
         <div class="model">
           <h3> Design of code: </h3>
           <div id="classes">
-            <h1> Class Restaurant </h1>
-            <h2> methods: </h2>
-            <p1><li> @menu - array of available dishes. </li></p1>
-            <p1> <li> create_dish(name, price) - create a dish. </p1>
-            <p1> <li> display_menu - shows a menu in a structured way. </p1>
-            <p1> <li> create_order(dish_list, total_number) - creates an order according to the names of dishes and a total number of dishes diven by the client. The total number is used to confirm that the user will receive a correct number of dishes. </p1>
-            <h1> Class Dish </h1>
-            <h2> method: </h2>
-            <p1> <li> @details - hash having a name and a price of a dish. </p1>
-            <h1> Class Order </h1>
-            <h2> methods: </h2>
-            <p1> <li> @list_of_items - list of dishes in an order. </p1>
-            <p1> <li> @total_number - total number of ordered dishes given by the user. </p1>
-            <p1> <li> add_items(name, price, amount) - adds dishes to the list_of_items. </p1>
-            <p1> <li> order_info - informs of the final price and number of dishes. </p1>
-            <p1> <li> count_final_price - counts final price. </p1>
-            <p1> <li> count_dishes - counts number of dishes in user's order. </p1>
-            <p1> <li> send_order - sends order if the number of dishes is correct. Creates a new Message. </p1>
-            <h1> Class Message </h1>
-            <h2> methods: </h2>
-            <p1> <li> creates a new Message with ETA. </p1>
+            <div class="single_class">
+              <h1> Class Restaurant </h1>
+              <h2> methods: </h2>
+              <p1><li> @menu - array of available dishes. </li></p1>
+              <p1> <li> create_dish(name, price) - create a dish. </p1>
+              <p1> <li> display_menu - shows a menu in a structured way. </p1>
+              <p1> <li> create_order(dish_list, total_number) - creates an order according to the names of dishes and a total number of dishes diven by the client. The total number is used to confirm that the user will receive a correct number of dishes. </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Dish </h1>
+              <h2> method: </h2>
+              <p1> <li> @details - hash having a name and a price of a dish. </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Order </h1>
+              <h2> methods: </h2>
+              <p1> <li> @list_of_items - list of dishes in an order. </p1>
+              <p1> <li> @total_number - total number of ordered dishes given by the user. </p1>
+              <p1> <li> add_items(name, price, amount) - adds dishes to the list_of_items. </p1>
+              <p1> <li> order_info - informs of the final price and number of dishes. </p1>
+              <p1> <li> count_final_price - counts final price. </p1>
+              <p1> <li> count_dishes - counts number of dishes in user's order. </p1>
+              <p1> <li> send_order - sends order if the number of dishes is correct. Creates a new Message. </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Message </h1>
+              <h2> methods: </h2>
+              <p1> <li> creates a new Message with ETA. </p1>
+            </div>
         </div>
         <h3> User Stories: </h3>
         <div id="user_stories">

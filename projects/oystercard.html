@@ -28,31 +28,35 @@
         <div class="model">
           <h3> Design of code: </h3>
           <div id="classes">
-            <h1> Class Oystercard </h1>
-            <h2> methods: </h2>
-            <p1><li> @balance - tells the balance of card, has a default value </li></p1>
-            <p1> <li> @journey_history - an array of all journeys. </p1>
-            <p1> <li> @current_journey - a current journey of card - after touch in. </p1>
-            <p1> <li> top_up(amount) - top up an oystercard </p1>
-            <p1> <li> touch_in(station) - enter a station </p1>
-            <p1> <li> touch_out(station) - exit a station </p1>
-            <p1> Private methods: </p1>
-            <p1> <li> no_touch_in_guard - checks if there was a touch in in the current journey </p1>
-            <p1> <li> no_touch_out_guard - checks if there was a touch out in the previous journey </p1>
-            <p1> <li> end_current_journey - sets @current_journey to nil </p1>
-            <p1> <li> save_journey - adds journey to @journey_history </p1>
-            <p1> <li> deduct(fare) - decreases the balance </p1>
-            <h1> Class Station </h1>
-            <h2> methods: </h2>
-            <p1> <li> @name - name of a station </p1>
-            <p1> <li> @zone - zone a station </p1>
-            <h1> Class Journey </h1>
-            <h2> methods: </h2>
-            <p1> <li> @entry_station - station of thouch in </p1>
-            <p1> <li> @exit_station - station of thouch out </p1>
-            <p1> <li> fare - tells a fare of a journey </p1>
-            <p1> Private method: </p1>
-            <p1> <li> calculate_fare - calculates the fare </p1>
+            <div class="single_class">
+              <h1> Class Oystercard </h1>
+              <h2> methods: </h2>
+              <p1><li> @balance - tells the balance of card, has a default value </li></p1>
+              <p1> <li> @journey_history - an array of all journeys. </p1>
+              <p1> <li> @current_journey - a current journey of card - after touch in. </p1>
+              <p1> <li> top_up(amount) - top up an oystercard </p1>
+              <p1> <li> touch_in(station) - enter a station </p1>
+              <p1> <li> touch_out(station) - exit a station </p1>
+              <p1> <li> no_touch_in_guard - checks if there was a touch in in the current journey </p1>
+              <p1> <li> no_touch_out_guard - checks if there was a touch out in the previous journey </p1>
+              <p1> <li> end_current_journey - sets @current_journey to nil </p1>
+              <p1> <li> save_journey - adds journey to @journey_history </p1>
+              <p1> <li> deduct(fare) - decreases the balance </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Station </h1>
+              <h2> methods: </h2>
+              <p1> <li> @name - name of a station </p1>
+              <p1> <li> @zone - zone a station </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Journey </h1>
+              <h2> methods: </h2>
+              <p1> <li> @entry_station - station of thouch in </p1>
+              <p1> <li> @exit_station - station of thouch out </p1>
+              <p1> <li> fare - tells a fare of a journey </p1>
+              <p1> <li> calculate_fare - calculates the fare </p1>
+            </div>
         </div>
         <h3> User Stories: </h3>
         <div id="user_stories">

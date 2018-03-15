@@ -32,47 +32,55 @@
         <div class="model">
           <h3> Design of code: </h3>
           <div id="classes">
-            <h1> Class User </h1>
-            <h2> methods: </h2>
-            <p1><li> @id - id of a user. </li></p1>
-            <p1><li> @name - name of a name. </li></p1>
-            <p1><li> @username - username of a user. </li></p1>
-            <p1><li> @email - email of a user. </li></p1>
-            <p1><li> @password - password of a user. </li></p1>
-            <p1> <li> self.create - puts a user to a database if data are valid. </p1>
-            <p1> <li> self.email_in_use?(email) - checks if email is already in the database. </p1>
-            <p1> <li> self.username_in_use?(username) - checks if username is already in the database. </p1>
-            <p1> <li> self.self.find_user_by_id(id) - gets a user from a database according to a given id. </p1>
-            <p1> <li> self.valid? - checks is length of provided sing up data is long enough. </p1>
-            <p1> <li> self.instanciate(username) - creates a new instance of User class. </p1>
-            <p1> <li> self.matching_data(username, password) - checks if username matches the password. </p1>
-            <h1> Class Peep </h1>
-            <h2> methods: </h2>
-            <p1><li> @id - id of a peep. </li></p1>
-            <p1><li> @text - text of a peep. </li></p1>
-            <p1><li> @author - author of a peep. </li></p1>
-            <p1><li> @date - date of peep. </li></p1>
-            <p1> <li> self.all - gets all peeps from the database. </p1>
-            <p1> <li> self.create(text, author) - creates a new peep and saves it in the database. </p1>
-            <p1> <li> self.in_limit?(text) - checks if a peep is not too long. </p1>
-            <h1> Class Flash </h1>
-            <h2> methods: </h2>
-            <p1><li> self.welcome(name) - welcomes a user </li></p1>
-            <p1><li> self.long_peep - tells that peep is too long </li></p1>
-            <p1><li> self.no_name - tells that name wasn't provided </li></p1>
-            <p1><li> email_in_use - tells that email is in use</li></p1>
-            <p1><li> self.username_in_use - tells that username is in use </li></p1>
-            <p1><li> self.too_short - ask to type at least 4 characters in sign up </li></p1>
-            <p1><li> self.after_log_in(name) - welcomes after log in </li></p1>
-            <p1><li> self.no_match - tells that username doesn't match password </li></p1>
-            <p1><li> self.after_log_out - says bye after log out </li></p1>
-            <p1><li> self.thanks_for_comment - thanks for commenting </li></p1>
-            <p1><li> self.no_id - tells that there is no peep with a given id</li></p1>
-            <h1> Class DatabaseConnection </h1>
-            <h2> methods: </h2>
-            <p1> <li> self.setup(database) - creates a connection using PG gem </p1>
-            <p1> <li> self.connection - returns the connection </p1>
-            <p1> <li> self.query(sql_string) - a skeleton for writing SQL commands </p1>
+            <div class="single_class">
+              <h1> Class User </h1>
+              <h2> methods: </h2>
+              <p1><li> @id - id of a user. </li></p1>
+              <p1><li> @name - name of a name. </li></p1>
+              <p1><li> @username - username of a user. </li></p1>
+              <p1><li> @email - email of a user. </li></p1>
+              <p1><li> @password - password of a user. </li></p1>
+              <p1> <li> self.create - puts a user to a database if data are valid. </p1>
+              <p1> <li> self.email_in_use?(email) - checks if email is already in the database. </p1>
+              <p1> <li> self.username_in_use?(username) - checks if username is already in the database. </p1>
+              <p1> <li> self.self.find_user_by_id(id) - gets a user from a database according to a given id. </p1>
+              <p1> <li> self.valid? - checks is length of provided sing up data is long enough. </p1>
+              <p1> <li> self.instanciate(username) - creates a new instance of User class. </p1>
+              <p1> <li> self.matching_data(username, password) - checks if username matches the password. </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Peep </h1>
+              <h2> methods: </h2>
+              <p1><li> @id - id of a peep. </li></p1>
+              <p1><li> @text - text of a peep. </li></p1>
+              <p1><li> @author - author of a peep. </li></p1>
+              <p1><li> @date - date of peep. </li></p1>
+              <p1> <li> self.all - gets all peeps from the database. </p1>
+              <p1> <li> self.create(text, author) - creates a new peep and saves it in the database. </p1>
+              <p1> <li> self.in_limit?(text) - checks if a peep is not too long. </p1>
+            </div>
+            <div class="single_class">
+              <h1> Class Flash </h1>
+              <h2> methods: </h2>
+              <p1><li> self.welcome(name) - welcomes a user </li></p1>
+              <p1><li> self.long_peep - tells that peep is too long </li></p1>
+              <p1><li> self.no_name - tells that name wasn't provided </li></p1>
+              <p1><li> email_in_use - tells that email is in use</li></p1>
+              <p1><li> self.username_in_use - tells that username is in use </li></p1>
+              <p1><li> self.too_short - ask to type at least 4 characters in sign up </li></p1>
+              <p1><li> self.after_log_in(name) - welcomes after log in </li></p1>
+              <p1><li> self.no_match - tells that username doesn't match password </li></p1>
+              <p1><li> self.after_log_out - says bye after log out </li></p1>
+              <p1><li> self.thanks_for_comment - thanks for commenting </li></p1>
+              <p1><li> self.no_id - tells that there is no peep with a given id</li></p1>
+            </div>
+            <div class="single_class">
+              <h1> Class DatabaseConnection </h1>
+              <h2> methods: </h2>
+              <p1> <li> self.setup(database) - creates a connection using PG gem </p1>
+              <p1> <li> self.connection - returns the connection </p1>
+              <p1> <li> self.query(sql_string) - a skeleton for writing SQL commands </p1>
+            </div>
         <h3> User Stories: </h3>
         <div id="user_stories">
           STRAIGHT UP <br>
