@@ -24,6 +24,10 @@ $( document ).ready(function() {
     $(".description").load('projects/bnb.html');
   });
 
+  $(".thermostat").click(function(){
+    $(".description").load('projects/thermostat.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });

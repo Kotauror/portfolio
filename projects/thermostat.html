@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Thermostat [Pair Programming]</div>
+      <div class="about"> A javascript application created as a weekly challange at week 5 of Makers Academy.<br> Learn about the temperature in your city and set the thermostat accordingly :) </div>
+      <div class="frameworks"> Front-end: Javascript, jQuery, HTML, CSS<br>Back-end: Javascript<br>Testing: Jasmine<br> </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          LOCALLY: <br>
+          - Clone this repository into to your local computer. <br>
+          - Use open the index.html file in the browser <br>
+          ONLINE: <br>
+          - http://change-temperature.surge.sh/
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Constructor Thermostat </h1>
+            <h2> methods: </h2>
+            <p1><li> changeMode - switches the energy-usage modes (saving power and normal). </li></p1>
+            <p1> <li> increase(number) - increase a temperature by a number </p1>
+            <p1> <li> increaseByOne - increase the temperature by one degree. </p1>
+            <p1> <li> decrease(number) - decrease a temperature by a number. </p1>
+            <p1> <li> decreaseByOne - decrease the temperature by one degree. </p1>
+            <p1> <li> reset - sets the temperature to default value (20 degrees). </p1>
+            <p1> <li> maxTemperatureAlert - gives alert when a maximum temperature for a particular mode has been reached </p1>
+            <p1> <li> minTemperatureAlert - gives alert when a minumum temperature for a particular mode has been reached </p1>
+        </div>
+        <h3> Customer Requirments: </h3>
+        <div id="user_stories">
+          Thermostat starts at 20 degrees <br>
+          You can increase the temp with an up function <br>
+          You can decrease the temp with a down function <br>
+          The minimum temperature is 10 degrees <br>
+          If power saving mode is on, the maximum temperature is 25 degrees <br>
+          If power saving mode is off, the maximum temperature is 32 degrees <br>
+          Power saving mode is on by default <br>
+          You can reset the temperature to 20 with a reset function <br>
+          You can ask about the thermostat's current energy usage: < 18 is low-usage, < 25 is medium-usage, anything else is high-usage. <br>
+          (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with orange, high-usage indicated with red.) <br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <div id="images">
+            <img src="https://image.ibb.co/cPwkUc/Zrzut_ekranu_2018_03_15_o_19_34_21.png" width="600em" height="300em">
+            <img src="https://image.ibb.co/djm29c/Zrzut_ekranu_2018_03_15_o_19_34_31.png" width="600em" height="300em">
+            <img src="https://image.ibb.co/ea5jNx/Zrzut_ekranu_2018_03_15_o_19_35_02.png" width="600em" height="300em">
+            <img src="https://image.ibb.co/i1uKNx/Zrzut_ekranu_2018_03_15_o_19_35_22.png" width="600em" height="300em">
+          </div>
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>
