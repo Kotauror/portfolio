@@ -32,6 +32,9 @@ $( document ).ready(function() {
     $(".description").load('projects/moist.html');
   });
 
+  $(".ama").click(function(){
+    $(".description").load('projects/ama.html');
+  });
 
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
