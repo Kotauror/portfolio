@@ -36,6 +36,10 @@ $( document ).ready(function() {
     $(".description").load('projects/ama.html');
   });
 
+  $(".airport").click(function(){
+    $(".description").load('projects/airport.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });
