@@ -55,9 +55,8 @@
   margin-left: 5%;
 }
 
-.images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.single_image {
+  width: inherit;
 }
 
 
