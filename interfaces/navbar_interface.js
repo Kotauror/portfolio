@@ -20,6 +20,10 @@ $( document ).ready(function() {
     $(".description").load('projects/bookmark.html');
   });
 
+  $(".bnb").click(function(){
+    $(".description").load('projects/bnb.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });
