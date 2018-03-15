@@ -44,6 +44,9 @@ $( document ).ready(function() {
     $(".description").load('projects/restaurant.html');
   });
 
+  $(".rps").click(function(){
+    $(".description").load('projects/rps.html');
+  });
 
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');

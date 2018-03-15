@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Rock-Paper-Scissors [Solo Project]</div>
+      <div class="about"> A ruby application created as a weekend challange at the 3nd weekend of Makers Academy.<br>Play Rock Paper Scissors! </div>
+      <div class="frameworks"> Front-end: CSS, HTML,<br>Back-end: Ruby,<br>Testing: Rspec,<br>Framework: Sinatra </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          LOCALLY:
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Run $ bundle <br>
+          - Run $ rackup <br><br>
+          ONLINE<br>
+          - http://rockspapersscissors.herokuapp.com
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes">
+            <h1> Class SingleGame </h1>
+            <h2> methods: </h2>
+            <p1><li> self.create - creates a new class instance. </li></p1>
+            <p1> <li> self.instance - returns the class instance of the game class. </p1>
+            <p1> <li> computer_weapon - picks the weapon for the computer. </p1>
+            <p1> <li> calculate_result - returns result based on rules:<br>
+              Rock beats scissors <br>
+              Scissors beats paper<br>
+              Paper beats rock. </p1>
+            <h1> Class MultiGame </h1>
+            <h2> methods: </h2>
+            <p1><li> self.create - creates a new class instance. </li></p1>
+            <p1> <li> self.instance - returns the class instance of the game class. </p1>
+              <p1> <li> calculate_result - returns result based on rules:<br>
+                Rock beats scissors <br>
+                Scissors beats paper<br>
+                Paper beats rock. </p1>
+            <h1> Class Player </h1>
+            <h2> method: </h2>
+            <p1> <li> @name - name of player </p1>
+        </div>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
+          As a marketeer<br>
+          So that I can see my name in lights<br>
+          I would like to register my name before playing an online game<br><br>
+
+          As a marketeer<br>
+          So that I can enjoy myself away from the daily grind<br>
+          I would like to be able to play rock/paper/scissors<br><br>
+
+          As a marketeer<br>
+          So that I can play against others<br>
+          I would like to be able to play in multiplayer mode<br><br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <img src="https://image.ibb.co/iLqOXx/Zrzut_ekranu_2018_03_15_o_21_52_07.png" class="single_image">
+          <img src="https://image.ibb.co/f2nbkH/Zrzut_ekranu_2018_03_15_o_21_52_16.png" class="single_image">
+          <img src="https://image.ibb.co/gMU0Cx/Zrzut_ekranu_2018_03_15_o_21_52_27.png" class="single_image">
+          <img src="https://image.ibb.co/ninnsx/Zrzut_ekranu_2018_03_15_o_21_52_33.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>
