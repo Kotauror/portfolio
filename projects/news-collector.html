@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> News-Collector [Solo Project]</div>
+      <div class="about"> A javascript application created as a weekend challange at the 7th weekend of Makers Academy.<br> Read the headlines from Guardian API and the summaries from Aylien in om ne place! </div>
+      <div class="frameworks"> Front-end: Javascript, jQuery, HTML, CSS<br>Back-end: Javascript<br>Testing: Jasmine<br> </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <h3> How to run it: </h3>
+        <div id="how_to_run">
+          LOCALLY: <br>
+          - Clone this repository into to your local computer. <br>
+          - Use open the index.html file in the browser <br>
+          ONLINE: <br>
+          - <a href="http://news-summaries.surge.sh/" class="website_link"> news-summaries.surge.sh/ </a>
+        </div>
+        <div class="model">
+          <h3> Design of code: </h3>
+          <div id="classes_one_class">
+            <h1> Constructor News </h1>
+            <h2> methods: </h2>
+            <p1><li> headline - headline from Guardian. </li></p1>
+            <p1> <li> url - url of an article. </p1>
+            <p1> <li> id - id of an article.  </p1>
+            <p1> <li> linkToImage - link to image. </p1>
+            <h1> App.js </h1>
+            <h2> methods: </h2>
+            <p1><li> getNews - gets the headlines, urls and links to image from the Guardian API. </li></p1>
+            <p1><li> getSummary(singleNews) - gets a summary from Aylien API, using an url of a singleNews object. </li></p1>
+            <p1> <li> render - renders the grid with news. </p1>
+            <p1> <li>  _onClick(singleNews) - shows a particular headline with a summary in a new window. </p1>
+        </div>
+        <h3> User Stories: </h3>
+        <div id="user_stories">
+          As a busy politician <br>
+          I can see all of today's headlines in one place<br>
+          So I know what the big stories of the day are<br><br>
+          As a busy politician<br>
+          I can click a link to see the original news article<br>
+          So that I can get an in depth understanding of a very important story<br><br>
+          As a busy politician<br>
+          I can see a summary of a news article<br>
+          So I can get a few more details about an important story<br><br>
+          As a busy politician<br>
+          I can see a picture to illustrate each news article when I browse headlines<br>
+          So that I have something nice to look at<br><br>
+          As a busy politician<br>
+          I can read the site comfortably on my phone<br>
+          Just in case my laptop breaks<br><br>
+          As a busy politician<br>
+          I can see whizzy animations in the app<br>
+          To make my news reading more fun<br><br>
+        </div>
+        <h3> Example of Use: </h3>
+        <div id="example_of_use">
+          <img src="https://image.ibb.co/hvPscx/Zrzut_ekranu_2018_03_16_o_20_48_07.png" class="single_image">
+          <img src="https://image.ibb.co/ey5yHx/Zrzut_ekranu_2018_03_16_o_20_48_18.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>

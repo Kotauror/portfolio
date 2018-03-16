@@ -52,6 +52,13 @@ $( document ).ready(function() {
     $(".description").load('projects/chitter.html');
   });
 
+  $(".bowling").click(function(){
+    $(".description").load('projects/bowling.html');
+  });
+
+  $(".news-collector").click(function(){
+    $(".description").load('projects/news-collector.html');
+  });
 
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
