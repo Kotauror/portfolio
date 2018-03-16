@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Food On Rails - a Yelp clone [Group Project]</div>
+      <div class="about"> A Rails application created as a weekly challange at week 8 of Makers Academy.<br> Add and review restaurants.</div>
+      <div class="frameworks"> Front-end: HTML, CSS<br>Back-end: Ruby<br>Testing: RSPec,<br>Framework: Rails, Devise </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <div id="how_to_run">
+          <h3> How to run it: </h3>
+          LOCALLY: <br>
+          - Clone this repository into to your local computer. <br>
+          - Run $ gem install bundle <br>
+          - Run $ bundle <br>
+          - Run $ rails server <br>
+        </div>
+        <div class="model">
+          <div id="classes_one_class">
+            <h3> Design of code: </h3>
+            <h1> Class Restaurant </h1>
+            <h2> methods: </h2>
+            <p1><li> all standard CRUD methods. </li></p1>
+            <p1> <li> count_average(rastaurant) - counts an average score for a particular restaurant. </p1>
+            <h1> Class Review </h1>
+            <h2> methods: </h2>
+            <p1><li> create - creates a new review. </li></p1>
+            <h1> Class User </h1>
+            <h2> methods: </h2>
+            <p1><li> work in progress - now a user can only sign up. </li></p1>
+        </div>
+        <div id="user_stories">
+          <h3> Specification: </h3>
+          Visitors can create new restaurants using a form, specifying a name and description.<br>
+          Restaurants can be edited and deleted. <br>
+          Visitors can leave reviews for restaurants, providing a numerical score (1-5) and a comment about their experience. <br>
+          The restaurants listings page should display all the reviews, along with the average rating of each restaurant. <br>
+          Validations should be in place for the restaurant and review forms - restaurants must be given a name and rating, reviews must be given a rating from 1-5 (comment is optional). <br>
+        </div>
+        <div id="example_of_use">
+          <h3> Example of Use: </h3>
+          <img src="https://image.ibb.co/kzaeqH/Zrzut_ekranu_2018_03_16_o_21_05_41.png" class="single_image">
+          <img src="https://image.ibb.co/fxQCAH/Zrzut_ekranu_2018_03_16_o_21_05_35.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>

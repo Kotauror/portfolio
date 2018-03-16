@@ -60,6 +60,10 @@ $( document ).ready(function() {
     $(".description").load('projects/news-collector.html');
   });
 
+  $(".yelp").click(function(){
+    $(".description").load('projects/yelp.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });

@@ -1,6 +1,9 @@
 html {
   font-family: Roboto;
 }
+body {
+  background-color: #fcfcfc;
+}
 
 .header {
   margin-top: 2em;
@@ -71,8 +74,8 @@ html {
 }
 
 .technology {
-  width: 90%;
-  margin-left: 5%;
+  width: 96%;
+  margin-left: 2%;
 }
 
 .single_image {
@@ -83,7 +86,7 @@ html {
 
 #user_stories {
   padding: 2em;
-  background-color: lightgrey;
+  background-color: #e4e4e4;
 }
 
 #example_of_use {
