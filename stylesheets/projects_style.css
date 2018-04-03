@@ -6,14 +6,19 @@ body {
 }
 
 .header {
-  margin-top: 3em;
-  margin-bottom: 1em;
+  margin-top: 4em;
   font-size: 2.2em;
   text-align: center;
 }
 
+.time {
+  margin-bottom: 1em;
+  font-size: 1.35em;
+  text-align: center;
+}
+
 .about {
-  font-size: 1.3em;
+  font-size: 1.15em;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -22,24 +27,25 @@ body {
   text-align: center;
   font-size: 1.1em;
   border-style: solid;
-  border-width: 0.2em;
-  width: fit-content;
+  border-width: 0.1em;
   margin-top: 2em;
   margin-left: auto;
   margin-bottom: 1em;
   margin-right: auto;
   padding: 0.8em;
-  background-color: #81d497;
-  border-color: #5da571;
+  border-color: #b7b7b7;
+  background-color: #3e97c342;
+  border-radius: 0.2em;
+  width: 100%;
 }
 
 .shortcut {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 0.05em;
-  width: 40%;
-  margin-left: 30%;
-  margin-bottom: 4em;
+  width: 30%;
+  margin-left: 35%;
+  margin-bottom: 6em;
 }
 
 .sc {
@@ -51,7 +57,6 @@ body {
 .sclink {
   font-size: 1.05em;
   color: black !important;
-  text-decoration: underline !important;
 }
 
 .website_link:link{
@@ -74,8 +79,9 @@ body {
 }
 
 .technology {
-  width: 96%;
-  margin-left: 2%;
+  margin-top: 2em;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .single_image {
@@ -85,8 +91,11 @@ body {
 }
 
 #user_stories {
-  padding: 2em;
   background-color: #e4e4e4;
+}
+
+.user_story_text {
+  padding: 1em;
 }
 
 #example_of_use {
@@ -102,8 +111,8 @@ h2 {
 }
 
 h3 {
-background-color: #cb3b3680;
-padding: 0.5em;
+background-color: #37ab7b4f;
+padding: 0.2em;
 }
 
 p1 {
