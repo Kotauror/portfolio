@@ -62,6 +62,8 @@ body {
 .sclink {
   font-size: 1.05em;
   color: black !important;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .website_link:link{
