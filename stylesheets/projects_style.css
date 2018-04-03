@@ -2,13 +2,14 @@ html {
   font-family: Roboto;
 }
 body {
-  background-color: #fcfcfc;
+  background-color: #fcfcfc4d;
 }
 
 .header {
   margin-top: 4em;
   font-size: 2.2em;
   text-align: center;
+  color: #3688b0;
 }
 
 .time {
@@ -40,9 +41,7 @@ body {
 }
 
 .shortcut {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 0.05em;
+  display: inline-flex;
   width: 30%;
   margin-left: 35%;
   margin-bottom: 6em;
@@ -52,6 +51,12 @@ body {
   text-align: center;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+  width: 25%;
+  border-right: 1px solid blue;
+}
+
+.sc:last-child {
+    border-right: 0 !important;
 }
 
 .sclink {
@@ -95,11 +100,7 @@ body {
 }
 
 .user_story_text {
-  padding: 1em;
-}
-
-#example_of_use {
-  background-color: lightgrey;
+  padding-left: 2em;
 }
 
 h1 {
