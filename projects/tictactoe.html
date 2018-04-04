@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Multi-Mode Tic-Tac-Toe </div>
+      <div class="time"> Solo project </div>
+      <div class="about"> A multi-mode tic-tac-toe game.<br> Play with computer, play with a friend, or watch two computers playing.<br> </div>
+      <div class="frameworks"> Back-end: Ruby,<br>Testing: RSpec </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <div id="how_to_run">
+          <h3> How to run it: </h3>
+          <h7> LOCALLY: </h7><br>
+          - Clone this repository into to your local computer. <br>
+          - <code> $ gem install bundle </code><br>
+          - <code> $ bundle </code><br>
+          - <code> $ cd Tic_Tac_Toe_8th_Light</code><br>
+          - <code> $ cd lib</code><br>
+          - <code> $ ruby setup.rb</code><br>
+          - Use in irb <br>
+        </div>
+        <div class="model">
+          <div id="classes">
+            <h3> Design of code: </h3>
+            <div class="single_class">
+              <h1> Setup file</h1>
+              <h2> methods: </h2>
+              <p1><li> <code>start_setup </code>- runs the setup. </li></p1>
+              <p1> <li> <code>set_player_mode </code>- sets the player mode. </p1>
+              <p1> <li> <code>player_order</code> - sets player order. </p1>
+              <p1> <li> <code>start_game</code> - starts the game. </p1>
+            </div>
+            <h1> Displayer class</h1>
+            <h2> methods: </h2>
+            <p1><li> <code>welcome </code>- welcomes the user to the game </li></p1>
+            <p1> <li> <code>set_player_mode </code>- informs of possible modes, gets the mode from user. </p1>
+            <p1> <li> <code>single_mode_name_sign</code> - sets player's sing in single mode game. </p1>
+            <p1> <li> <code>multi_mode_name_sign</code> - sets players' sings in multi mode game.</p1>
+            <p1><li> <code>computer_mode </code>- tells that the user picked a computer mode </li></p1>
+            <p1><li> <code>inform_of_computer_sing </code>- informs of computer sign </li></p1>
+            <p1><li> <code>get_order_information </code>- gets information about preferred order of players </li></p1>
+            <p1><li> <code>ask_for_name_and_sign </code>- asks for name and sign in single game </li></p1>
+            <p1><li> <code>ask_for_name_and_sign_second_player(user_one_data) </code>- asks for name and sign in muti game </li></p1>
+            <p1><li> <code>single_game_sign_guard </code>- prevents from picking wrong signs in a single game </li></p1>
+            <p1><li> <code>multi_game_sign_guard </code>- prevents from picking wrong signs in a multi game </li></p1>
+            <p1><li> <code>set_up_ready </code>- tells the setup is ready. </li></p1>
+            <p1><li> <code>show_board </code>- shows the board. </li></p1>
+            <p1><li> <code>ask_for_number </code>- asks where to put a sign on a board. </li></p1>
+            <p1><li> <code>inform_of_move </code>- informs of a made move. </li></p1>
+            <p1><li> <code>color_cell </code>- colors a cell according to player's color </li></p1>
+            <p1><li> <code>final_score_announcement </code>- announces the final score </li></p1>
+            <h1> Game class</h1>
+            <h2> methods: </h2>
+            <p1><li> <code>@mode </code>- mode of game (single, multi, computers) </li></p1>
+            <p1> <li> <code>@player1 </code>- first player object. </p1>
+            <p1> <li> <code>@player2 </code>- second player object. </p1>
+            <p1> <li> <code>@active_player </code>- active player object </p1>
+            <p1> <li> <code>@opponent </code>- passive player object. </p1>
+            <p1> <li> <code>@board </code>-an instance of a <code>Board</code> class. </p1>
+            <p1> <li> <code>@displayer </code>-an instance of a <code>Displayer</code> class. </p1>
+            <p1> <li> <code>set_up_mode</code> - sets up the mode. </p1>
+            <p1> <li> <code>set_player_1</code> - sets player 1.</p1>
+            <p1> <li> <code>set_player_2</code> - sets player 2.</p1>
+            <p1><li> <code>set_active_player </code>- sets the active player </li></p1>
+            <p1><li> <code>set_opponent </code>- sets the passive player</li></p1>
+            <p1><li> <code>game_play </code>- plays a game </li></p1>
+            <p1><li> <code>switch_active_player </code>-switches the active player </li></p1>
+            <p1><li> <code>get_number </code>- delegates displayer to get the number from a user </li></p1>
+            <h1> Board class</h1>
+            <h2> methods: </h2>
+            <p1><li> <code>@values </code>- values that are curently on board</li></p1>
+            <p1> <li> <code>put_sign_on_board </code>- puts a payer's sign on board. </p1>
+            <p1> <li> <code>is_valid?</code> - checks if a given spot is possible to use </p1>
+            <p1> <li> <code>is_game_won?</code> - tells if a game is won.</p1>
+            <p1> <li> <code>is_tie?</code> - tells if there is a tie.</p1>
+            <p1><li> <code>available_numbers </code>- tells what spots on board are still available </li></p1>
+            <p1><li> <code>all_spots_taken? </code>- returns true if there are no free spots on board. </li></p1>
+            <h1> Player super-class</h1>
+            <h2> methods: </h2>
+            <p1><li> <code>@name </code>- name of player</li></p1>
+            <p1><li> <code>@sign </code>- name of player</li></p1>
+            <h1> Computer class (inherits from Player)</h1>
+            <h2> methods: </h2>
+            <p1><li> <code>select_number </code>- tells a move picked by a computer - either a random move of a elaborate move</li></p1>
+            <p1><li> <code>random_move </code>- picks a random spot on board</li></p1>
+            <p1><li> <code>elaborate_move </code>- picks best possible spot</li></p1>
+            <ul>
+            <p1><li> <code>pick_5_when_possible </code>- picks middle spot when possible</li></p1>
+            <p1><li> <code>pick_winning_position </code>- picks winning position when possible</li></p1>
+            <p1><li> <code>block_opponent </code>- picks a position to block opponent when possible</li></p1>
+          </ul>
+            <h1> Human class (inherits from Player)</h1>
+          </div>
+        </div>
+        <div id="user_stories">
+          <h3> Specification: </h3>
+          <div class="user_story_text">
+          I was asked to implement the following features in a classic tic-tac-toe game: <br><br>
+
+          - Three modes of game: Human vs Human, Human vs Computer, Computer vs Computer;<br>
+          - Human player can pick their name and sign(marker);<br>
+          - In all modes users are asked to choose who goes first;<br>
+          - Computer plays on a medium level - each time it is to make a move, it:<br>
+            - randomizes whether to make a random move or a best possible move;<br>
+            - makes a move selected in the step above; <br>
+          - Command-line interface;<br><br>
+
+          Additions:<br>
+          - Goblet for the winner<br>
+          - Colored board and error messages to make the flow of the game easier to follow;<br><br>
+        </div>
+        </div>
+        <div id="example_of_use">
+          <h3> Example of Use: </h3>
+          <img src="https://image.ibb.co/nyQfux/Zrzut_ekranu_2018_04_04_o_20_12_41.png" class="single_image">
+          <img src="https://image.ibb.co/jKEjMc/Zrzut_ekranu_2018_04_04_o_20_13_58.png" class="single_image">
+          <img src="https://image.ibb.co/edtiEx/Zrzut_ekranu_2018_04_04_o_20_14_44.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>

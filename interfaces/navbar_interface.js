@@ -68,6 +68,18 @@ $( document ).ready(function() {
     $(".description").load('projects/fridge.html');
   });
 
+  $(".dinosaurs").click(function(){
+    $(".description").load('projects/dinosaurs.html');
+  });
+
+  $(".bombercat").click(function(){
+    $(".description").load('projects/bombercat.html');
+  });
+
+  $(".tictactoe").click(function(){
+    $(".description").load('projects/tictactoe.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });

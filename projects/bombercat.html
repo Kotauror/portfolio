@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Bombercat </div>
+      <div class="time"> Group project </div>
+      <div class="about"> A javascript game created as a weekly challange at week 9 of Makers Academy.<br> A clone of bomberman with cats. </div>
+      <div class="frameworks"> Front-end: Javascript, jQuery, HTML, CSS<br>Framework: EaselJS<br>Testing: Jasmine<br> </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <div id="how_to_run">
+          <h3> How to run it: </h3>
+          <h7> ONLINE: </h7><br>
+          - <a href="http://bombercat.surge.sh" class="website_link"> bombercat.surge.sh </a><br><br>
+          <h7> LOCALLY: </h7><br>
+          - Clone this repository into to your local computer. <br>
+          - Open the index.html file in the browser <br>
+        </div>
+        <div class="model">
+          <div id="classes">
+            <h3> Design of code: </h3>
+            <div class="single_class">
+              <h1> Play module </h1>
+              <h2> methods: </h2>
+              <p1><li> <code> buildMap </code> - builds a map of tiles, according to the tileSheet </li></p1>
+              <p1><li> <code> refreshLocation </code> - rebuilds the map according to the current state of game </li></p1>
+              <p1><li> <code> detectKeys </code> - detects key pressed by the user </li></p1>
+              <p1><li> <code> startMusic </code> - starts playing the music </li></p1>
+              <p1><li> <code> handleComplete </code> - loads the game when all components are ready </li></p1>
+              <h1> PlayerSheet module </h1>
+              <h2> methods: </h2>
+              <p1><li> <code> addPlayer </code> - creates a player </li></p1>
+              <p1><li> <code> whichColumn </code> - tells in which column the player is at a given moment</li></p1>
+              <p1><li> <code> whichRow </code> - tells in which row the player is at a given moment</li></p1>
+              <p1><li> <code> movePlayer </code> - moves the player </li></p1>
+              <p1><li> <code> playerAtDog </code> - tells if the player touched the dog </li></p1>
+              <p1><li> <code> playerAtWold </code> - tells if the player touched the wolf </li></p1>
+              <p1><li> <code> playerAtDoor </code> - tells if the player managed to get to the door </li></p1>
+              <p1><li> <code> playerDeath </code> - tells if the player is dead or not </li></p1>
+              <h1> DogSheet and WolfSheet modules </h1>
+              <h2> methods: </h2>
+              <p1><li> <code> addDog </code> - creates a dog </li></p1>
+              <p1><li> <code> whichColumn </code> - tells in which column the dog is at a given moment</li></p1>
+              <p1><li> <code> whichRow </code> - tells in which row the pladogyer is at a given moment</li></p1>
+              <p1><li> <code> moveDog </code> - moves the dog </li></p1>
+              <h1> tileSheet </h1>
+              <p1><li> creates <code> SpriteSheet </code> and <code> BitMapAnimation </code> according to tiles image</li></p1>
+              <h1> Maps module </h1>
+              <p1><li> <code> maps </code> - an array of available maps </li></p1>
+              <h1> Music module </h1>
+              <p1><li> <code> sound </code> - contains information about sound </li></p1>
+              <p1><li> <code> play </code> - plays the sound </li></p1>
+            </div>
+        </div>
+        <div id="user_stories">
+          <h3> User Stories: </h3>
+          <div class="user_story_text">
+          As a programmer <br>
+          So I can relax after a long day of coding <br>
+          I want to play bomberman!<br> With cats.<br><br>
+        </div>
+        </div>
+        <div id="example_of_use">
+          <h3> Example of Use: </h3>
+            <img src="https://image.ibb.co/hNpZMc/Zrzut_ekranu_2018_04_04_o_19_30_43.png" class="single_image">
+            <img src="https://image.ibb.co/icUOEx/Zrzut_ekranu_2018_04_04_o_19_31_20.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>
