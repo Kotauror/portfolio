@@ -64,6 +64,10 @@ $( document ).ready(function() {
     $(".description").load('projects/yelp.html');
   });
 
+  $(".fridge").click(function(){
+    $(".description").load('projects/fridge.html');
+  });
+
   $(".navbar-brand").click(function(){
     $(".description").text('thank you!');
   });

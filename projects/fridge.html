@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/projects_style.css">
+  </head>
+  <body>
+    <div class="general">
+      <div class="header"> Instagram clone </div>
+      <div class="time"> Solo project </div>
+      <div class="about"> A ruby on rails application created as a weekend challange at the 9th weekend of Makers Academy.<br> Add, comment and like photos. </div>
+      <div class="frameworks"> Front-end: CSS, HTML,<br>Back-end: Ruby, <br>Database: Postgres, <br>Testing: RSpec,<br>Framework: Rails, Paperclip, Devise, <br> Deployment: Amazon Web Services </div>
+      <div class="shortcut">
+        <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
+        <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
+        <div class="sc"> <a href="#user_stories" class="sclink"> User stories </a> </div>
+        <div class="sc"> <a href="#example_of_use" class="sclink">Example of use </a> </div>
+      </div>
+      <div class="technology">
+        <div id="how_to_run">
+          <h3> How to run it: </h3>
+          LOCALLY:
+          - Clone this repo;
+          - Run gem install bundler
+          - Run bundle to install all the gems;
+          - Run rake db:create
+          - Run rake db:migrate to generate the necessary databases. If you are having problems with running rake db:migrate try running bin/rake db:migrate;
+          - Run rails server;
+          - Visit localhost:3000;
+          ONLINE<br>
+          - <a href="http://photo-fridge.herokuapp.com" class="website_link"> photo-fridge.herokuapp.com </a>
+        </div>
+        <div class="model">
+          <div id="classes">
+            <h3> Design of code: </h3>
+            <div class="single_class">
+              <h1> Class Photo </h1>
+              <h2> methods: </h2>
+              <p1><li> create a photo. </li></p1>
+              <h1> Class Comment </h1>
+              <h2> methods: </h2>
+              <p1><li> create a comment. </li></p1>
+              <h1> Class Like </h1>
+              <h2> methods: </h2>
+              <p1><li> create a like - one user can like a picture only once. </li></p1>
+              <h1> Class User </h1>
+              <h2> properties: </h2>
+              <p1><li> All of the Devise gem properties (sign up, sign in, sing out). </li></p1>
+              <p1><li> Additionally all users have username which identifies them on the website. </li></p1>
+            </div>
+        </div>
+        <div id="user_stories">
+          <h3> User Stories: </h3>
+          <div class="user_story_text">
+          As a visitor<br>
+          So that I can see food<br>
+          I would like to see pictures even if I'm not registered<br><br>
+
+          As a visitor<br>
+          So that I can enjoy food even more<br>
+          I would like to be able to register and sign up on the page <br><br>
+
+          As a registered user<br>
+          So that I can show my admiration<br>
+          I would like to be able to like and comment photos <br><br>
+        </div>
+        </div>
+        <div id="example_of_use">
+          <h3> Example of Use: </h3>
+          <img src="https://image.ibb.co/mjLDxH/Zrzut_ekranu_2018_04_04_o_18_17_49.png" class="single_image">
+          <img src="https://image.ibb.co/gmQDxH/Zrzut_ekranu_2018_04_04_o_18_19_40.png" class="single_image">
+        </div>
+      </div>
+      <div class="reflection"> </div>
+    </div>
+    <div class="pictures"></div>
+  </body>
+</html>
