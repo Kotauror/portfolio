@@ -1,5 +1,9 @@
 $( document ).ready(function() {
 
+  $(".aboutme").click(function(){
+    location.reload();
+  });
+
   $(".boris").click(function(){
     $(".description").load('projects/boris.html');
   });
@@ -78,10 +82,6 @@ $( document ).ready(function() {
 
   $(".tictactoe").click(function(){
     $(".description").load('projects/tictactoe.html');
-  });
-
-  $(".navbar-brand").click(function(){
-    $(".description").text('thank you!');
   });
 
 })
