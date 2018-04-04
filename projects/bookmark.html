@@ -34,42 +34,42 @@
             <div class="single_class">
                 <h1> Class Link </h1>
                 <h2> methods: </h2>
-                <p1><li> @id - id of a comment. </li></p1>
-                <p1><li> @url - url of a bookmark. </li></p1>
-                <p1><li> @title - title of bookmark. </li></p1>
-                <p1> <li> self.all - gets all bookmarks from the one-to-many database. </p1>
-                <p1> <li> self.add - creates a new bookmark and saves it in the database. </p1>
-                <p1> <li> self.delete - deletes bookmark from the database. </p1>
-                <p1> <li> self.update - updates a bookmark in the database. </p1>
-                <p1> <li> self.is_url?(url) - cheks if provided link starts with www or http://. </p1>
-                <p1> <li> self.is_title?(title) - cheks if database contains a title </p1>
+                <p1><li> <code> @id </code>- id of a comment. </li></p1>
+                <p1><li> <code> @url </code>- url of a bookmark. </li></p1>
+                <p1><li><code>  @title</code> - title of bookmark. </li></p1>
+                <p1> <li> <code> self.all</code> - gets all bookmarks from the one-to-many database. </p1>
+                <p1> <li><code>  self.add</code> - creates a new bookmark and saves it in the database. </p1>
+                <p1> <li><code>  self.delete</code> - deletes bookmark from the database. </p1>
+                <p1> <li><code>  self.update</code> - updates a bookmark in the database. </p1>
+                <p1> <li> <code> self.is_url?(url)</code> - cheks if provided link starts with www or http://. </p1>
+                <p1> <li><code>  self.is_title?(title) </code>- cheks if database contains a title </p1>
             </div>
             <div class="single_class">
               <h1> Class Comment </h1>
               <h2> methods: </h2>
-              <p1><li> @id - id of a comment. </li></p1>
-              <p1><li> @text - text of a comment. </li></p1>
-              <p1><li> @link_id - id of a bookmark to which the comment refers. </li></p1>
-              <p1> <li> self.all - gets all comments from the database. </p1>
-              <p1> <li> self.add - creates a new comment and saves it in the database. </p1>
-              <p1> <li> self.is_id?(id) - checks if an id of a bookmark exists. </p1>
+              <p1><li> <code> @id </code>- id of a comment. </li></p1>
+              <p1><li><code>  @text</code> - text of a comment. </li></p1>
+              <p1><li> <code> @link_id</code> - id of a bookmark to which the comment refers. </li></p1>
+              <p1> <li><code>  self.all</code> - gets all comments from the database. </p1>
+              <p1> <li> <code> self.add </code>- creates a new comment and saves it in the database. </p1>
+              <p1> <li> <code> self.is_id?(id)</code> - checks if an id of a bookmark exists. </p1>
             </div>
             <div class="single_class">
               <h1> Class Tag </h1>
               <h2> methods: </h2>
-              <p1><li> @id - id of a tag. </li></p1>
-              <p1><li> @content - content of a tag. </li></p1>
-              <p1> <li> self.all_pairs - gets all bookmark-tag pairs from the many-to-many database. </p1>
-              <p1> <li> self.all_tags - gets all tags from the database. </p1>
-              <p1> <li> self.add_to_tags(tag) - adds a tag to tags database. </p1>
-              <p1> <li> self.add_to_link_tags(link_id, tag_id) - adds a pair to many-to-many database </p1>
+              <p1><li> <code> @id </code>- id of a tag. </li></p1>
+              <p1><li> <code> @content </code>- content of a tag. </li></p1>
+              <p1> <li> <code> self.all_pairs</code> - gets all bookmark-tag pairs from the many-to-many database. </p1>
+              <p1> <li> <code> self.all_tags</code> - gets all tags from the database. </p1>
+              <p1> <li> <code> self.add_to_tags(tag) </code>- adds a tag to tags database. </p1>
+              <p1> <li> <code> self.add_to_link_tags(link_id, tag_id) </code>- adds a pair to many-to-many database </p1>
             </div>
             <div class="single_class">
               <h1> Class DatabaseConnection </h1>
               <h2> methods: </h2>
-              <p1> <li> self.setup(database) - creates a connection using PG gem </p1>
-              <p1> <li> self.connection - returns the connection </p1>
-              <p1> <li> self.query(sql_string) - a skeleton for writing SQL commands </p1>
+              <p1> <li> <code> self.setup(database) </code>- creates a connection using PG gem </p1>
+              <p1> <li> <code> self.connection </code>- returns the connection </p1>
+              <p1> <li> <code> self.query(sql_string) </code>- a skeleton for writing SQL commands </p1>
             </div>
         <div id="user_stories">
           <h3> User Stories: </h3>
