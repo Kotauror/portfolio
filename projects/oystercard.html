@@ -115,37 +115,37 @@
         <div id="example_of_use">
           <h3> Example of Use: </h3>
           <ul>
-            <li>$ require './lib/oystercard' </li>
+            <li><code>$ require './lib/oystercard'</code> </li>
             <li>=> true</li>
-            <li>$ require './lib/journey'</li>
+            <li><code>$ require './lib/journey'</code> </li>
             <li>=> true</li>
-            <li>$ require './lib/station'</li>
+            <li><code>$ require './lib/station'</code> </li>
             <li>=> true</li>
-            <li>$ card = Oystercard.new </li>
+            <li><code>$ card = Oystercard.new </code> </li>
             <li> => # &lt Oystercard:0x00007f8a3c8bee30 @balance=0, @journey_history=[], @current_journey=nil &gt </li>
-            <li>$ card.top_up(50) </li>
+            <li><code>$ card.top_up(50) </code> </li>
             <li>=> 50 </li>
-            <li>$ station = Station.new("Farrington", 1) </li>
+            <li><code>$ station = Station.new("Farrington", 1)</code>  </li>
             <li>=> # &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt </li>
-            <li>$ card.touch_in(station) </li>
+            <li><code>$ card.touch_in(station) </code> </li>
             <li> => # &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt </li>
-            <li>$ station2 = Station.new("Camden", 2) </li>
+            <li><code>$ station2 = Station.new("Camden", 2)</code>  </li>
             <li> => [# &lt Station:0x00007f8a3c8a1ec0 @name="Camden", @zone=2 &gt ] </li>
-            <li>$ card.touch_out(station2) </li>
+            <li><code>$ card.touch_out(station2) </code> </li>
             <li> => nil </li>
-            <li>$ card.balance </li>
+            <li><code>$ card.balance </code> </li>
             <li> => 48       ////////// normal fare of 2p was deducted (compele journey - touch in + touch out) </li>
-            <li>$ card.journey_history </li>
+            <li><code>$ card.journey_history </code> </li>
             <li> => [# &lt Journey:0x00007f8a3d153000 @entry_station=# &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt, @exit_station=# &lt Station:0x00007f8a3c8a1ec0 @name="Camden", @zone=2 &gt ] </li>
-            <li>$ card.touch_out(station2) </li>
+            <li><code>$ card.touch_out(station2)</code>  </li>
             <li> => nil </li>
-            <li>$ card.balance </li>
+            <li><code>$ card.balance </code> </li>
             <li> => 42     ////////// penalty fare of 6p was deducted (incompele journey - touch out without touch in)</li>
-            <li>$ card.touch_in(station) </li>
+            <li><code>$ card.touch_in(station) </code> </li>
             <li> => [# &lt Station:0x00007f8a3c851628 @name="Farrington", @zone=1 &gt ] </li>
-            <li>$ card.touch_out(station2) </li>
+            <li><code>$ card.touch_out(station2) </code> </li>
             <li> => nil </li>
-            <li>$ card.balance </li>
+            <li><code>$ card.balance</code>  </li>
             <li> => 40 </li>      ////////// normal fare of 2p was deducted (compele journey - touch in + touch out)</li>
           </ul>
         </div>

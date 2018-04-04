@@ -79,21 +79,21 @@
           <h3> Example of Use: </h3>
           <ul>
             <sample>
-            <li>$ require './lib/airport' </li>
+            <li><code>$ require './lib/airport' </code> </li>
             <li>=> true</li>
-            <li>$ require './lib/plane'</li>
+            <li><code>$ require './lib/plane'</code> </li>
             <li>=> true</li>
-            <li>$ plane = Plane.new</li>
+            <li><code>$ plane = Plane.new<</code> /li>
             <li> => # &lt Plane:0x00007fbfc913d4c8 @status="flying" &gt  </li>
-            <li>$ airport = Airport.new(1) //// airport with capacity 1</li>
+            <li><code>$ airport = Airport.new(1) //// airport with capacity 1</code> </li>
             <li>=> # &lt Airport:0x00007fbfc912f198 @planes_a=[], @capacity=1 &gt </li>
-            <li>$ plane1.land(airport)</li>
+            <li><code>$ plane1.land(airport)</code> </li>
             <li> => # [&lt Plane:0x00007fbfc913d4c8 @status="at_airport" &gt] </li>
-            <li>$ plane2 = Plane.new </li>
+            <li><code>$ plane2 = Plane.new </code> </li>
             <li> => # &lt Plane:0x00007fbfc9126390 @status="flying"> </li>
-            <li>$ plane2.land(airport) </li>
+            <li><code>$ plane2.land(airport) </code> </li>
             RuntimeError (No free spots avaialble at this airport)<br>
-            <li>$ plane1.take_off(airport) </li>
+            <li><code> $ plane1.take_off(airport)</code>  </li>
             <li> => # &lt Plane:0x00007fbfc913d4c8 @status="flying" </li>
           </sample>
           </ul>

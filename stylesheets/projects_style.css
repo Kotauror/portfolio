@@ -123,3 +123,7 @@ h7 {
 p1 {
   font-size: 1em;
 }
+
+.text-hyperlink {
+  color: #3e97c3;
+}

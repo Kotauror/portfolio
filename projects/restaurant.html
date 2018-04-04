@@ -11,7 +11,7 @@
       <div class="header"> Takeaway restaurant simulator</div>
       <div class="time"> Solo project </div>
       <div class="about"> A ruby program created as a weekend challange at the 2nd weekend of Makers Academy.<br>Order food and receive a SMS confirmation. </div>
-      <div class="frameworks"> Back-end: Ruby,<br>Testing: Rspec </div>
+      <div class="frameworks"> Back-end: Ruby,<br>Testing: Rspec, <br>Additional feature: Twillio gem SMS<br></div>
       <div class="shortcut">
         <div class="sc"> <a href="#how_to_run" class="sclink"> How to run it </a> </div>
         <div class="sc"> <a href="#classes" class="sclink"> Design of code </a> </div>
@@ -83,25 +83,25 @@
         <div id="example_of_use">
           <h3> Example of Use: </h3>
           <ul>
-            <li>$ require './lib/restaurant' </li>
+            <li> <code>$ require './lib/restaurant' </code></li>
             <li>=> true</li>
-            <li>$ restaurant = Restaurant.new</li>
+            <li><code>$ restaurant = Restaurant.new</code></li>
             <li> => # &lt Restaurant:0x00007fce0c5bf8d8 @menu=[] &gt </li>
-            <li>$ restaurant.create_dish("chicken", 10)</li>
+            <li><code>$ restaurant.create_dish("chicken", 10)</code></li>
             <li>=> [# &lt Dish:0x00007fce0c5b6be8 @details={:name=>"chicken", :price=>10} &gt ]</li>
-            <li>$ restaurant.create_dish("beef", 30) </li>
+            <li><code>$ restaurant.create_dish("beef", 30)</code> </li>
             <li>=> [# &lt Dish:0x00007fce0c5b6be8 @details={:name=>"chicken", :price=>10} &gt , &lt Dish:0x00007fce0c5b2520 @details={:name=>"beef", :price=>30} &gt ]</li>
-            <li>$ restaurant.display_menu </li>
+            <li><code>$ restaurant.display_menu</code> </li>
             <li> - chicken | 10 pounds <br>
             - beef | 30 pounds<br>
           => [# &lt Dish:0x00007fce0c5b6be8 @details={:name=>"chicken", :price=>10} &gt , &lt Dish:0x00007fce0c5b2520 @details={:name=>"beef", :price=>30} &gt ]</li>
-            <li>$ justine = restaurant.create_order([{name: "chicken", amount: 6}, {name:"beef", amount: 3}], 9) </li>
+            <li><code>$ justine = restaurant.create_order([{name: "chicken", amount: 6}, {name:"beef", amount: 3}], 9)</code> </li>
             => # &lt Order:0x00007fce0c529d60 @list_of_items=[{:name=>"chicken", :price=>10, :amount=>6}, {:name=>"beef", :price=>30, :amount=>3}], @total_number=9 &gt
-            <li>$ justine.order_info </li>
+            <li><code>$ justine.order_info </code></li>
             <li> Final price: 150 <br>
             Final number of dishes 9<br>
              => nil </li>
-            <li>$ justine.send_order </li>
+            <li><code>$ justine.send_order </code></li>
             In a minute, you should receive a SMS confirmation of your order <br>
             => # &lt Message:0x00007fce0c5aa898 &gt
           </ul>

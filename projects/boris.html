@@ -123,39 +123,39 @@
         <div id="example_of_use">
           <h3> Example of Use: </h3>
           <ul>
-            <li>$ require './lib/bike' </li>
+            <li><code>$ require './lib/bike' </code></li>
             <li>=> true</li>
-            <li>$ require './lib/docking_station'</li>
+            <li><code>$ require './lib/docking_station'</code></li>
             <li>=> true</li>
-            <li>$ require './lib/garage'</li>
+            <li><code>$ require './lib/garage'</code></li>
             <li>=> true</li>
-            <li>$ require './lib/van'</li>
+            <li><code>$ require './lib/van'</code></li>
             <li>=> true</li>
-            <li>$ bike = Bike.new</li>
+            <li><code>$ bike = Bike.new<</code>/li>
             <li> => # &lt Bike:0x007fd1eb91f4f0 @working=true &gt </li>
-            <li>$ bike.report </li>
+            <li><code>$ bike.report </code></li>
             <li>=> "Bike is working" </li>
-            <li>$ station = DockingStation.new </li>
+            <li><code>$ station = DockingStation.new </code></li>
             <li>=> # &lt DockingStation:0x007fd1ed04e1a8 @bikes=[], @capacity=20 &gt </li>
-            <li>$ bike2 = Bike.new(false)</li>
+            <li><code>$ bike2 = Bike.new(false)</code></li>
             <li> => # &lt Bike:0x007fd1eb9c17c8 @working=false &gt </li>
-            <li>$ station.dock(bike) </li>
+            <li><code>$ station.dock(bike)</code> </li>
             <li> => [# &lt Bike:0x007fd1eb91f4f0 @working=true &gt ] </li>
-            <li>$ station.dock(bik2) </li>
+            <li><code>$ station.dock(bik2) </code></li>
             <li> => [# &lt Bike:0x007fd1eb91f4f0 @working=true &gt, # &lt Bike:0x007fd1eb9c17c8 @working=false &gt ] </li>
-            <li>$ van = Van.new </li>
+            <li><code>$ van = Van.new </code></li>
             <li> => # &lt Van:0x007fd1eb840c00 @collection_of_bikes=[]> </li>
-            <li>$ van.collect_bikes(station) </li>
+            <li><code>$ van.collect_bikes(station) </code></li>
             <li> => [# &lt Bike:0x007fd1eb9c17c8 @working=false &gt ] </li>
-            <li>$ garage = Garage.new </li>
+            <li><code>$ garage = Garage.new</code></li>
             <li> => # &lt Garage:0x007fd1eb972b00 @collection_of_bikes=[] &gt </li>
-            <li>$ garage.receive_bikes(van) </li>
+            <li><code>$ garage.receive_bikes(van)</code> </li>
             <li> => [# &lt Bike:0x007fd1eb9c17c8 @working=false &gt ] </li>
-            <li>$ van.collection_of_bikes </li>
+            <li><code>$ van.collection_of_bikes</code> </li>
             <li> => [] </li>
-            <li>$ garage.collection_of_bikes </li>
+            <li><code>$ garage.collection_of_bikes</code> </li>
             <li> => [# &lt Bike:0x007fd1eb9c17c8 @working=false &gt ] </li>
-            <li> $ garage.fix_bikes </li>
+            <li> <code>$ garage.fix_bikes </code></li>
             <li> => [# &lt Bike:0x007fd1eb9c17c8 @working=true &gt ] </li>
           </ul>
         </div>
