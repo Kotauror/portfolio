@@ -25,7 +25,7 @@ $( document ).ready(function() {
   });
 
   $(".tdd").click(function(){
-    $(".tdd").text("I'm sticking to TDD as much as possible, what helps me to produce a fully-working, clean and easy to read code. In a vast majority of cases, my test coverate is > 95%.");
+    $(".tdd").text("I'm sticking to TDD as much as possible, which helps me to produce a fully-working, clean and easy to read code. In a vast majority of cases, my test coverate is > 95%.");
   });
 
   $(".solid").click(function(){
