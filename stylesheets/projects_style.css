@@ -3,6 +3,7 @@ html {
 }
 body {
   background-color: #fcfcfc4d;
+  font-family: Roboto;
 }
 
 .header {
@@ -100,6 +101,7 @@ body {
 
 .user_story_text {
   padding-left: 2em;
+  padding-bottom: 0.5em;
 }
 
 h1 {
