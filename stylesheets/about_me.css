@@ -1,15 +1,14 @@
 .grid {
   width: 80%;
-  padding-top: 5em;
+  padding-top: 4.5em;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-column-gap: 0.5em;
-  grid-row-gap: 1.5em;
+  grid-row-gap: 0.7em;
 }
 
 .inner_grid {
-  background-color: red;
 }
 
 .about_me {
@@ -27,6 +26,10 @@
   padding: 1em;
 }
 
+.best_practices {
+  padding: 1em;
+}
+
 h6 {
   height: 6em;
 }
@@ -39,10 +42,53 @@ h6 {
 }
 
 .skill {
-  background-color: blue;
-  height: 4em;
+  background-color: #3e97c3;
+  height: inherit;
+  padding: 0.4em;
+  text-align: center;
 }
 
 .skill:hover {
-  transform: scale(1.2);
+  box-shadow: 0px 0px 20px yellow;
+}
+
+.practice_grid {
+  display: grid;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 0.5em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.practice {
+  background-color: #62aed4;
+  height: inherit;
+  padding: 0.4em;
+  text-align: center;
+}
+
+.practice:hover {
+  box-shadow: 0px 0px 20px yellow;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        display: block;
+    }
+
+    .skill {
+      margin-bottom: 0.5em;
+    }
+
+    .skills_grid {
+        display: block;
+    }
+
+    .practice {
+      margin-bottom: 0.5em;
+    }
+    
+    .practice_grid {
+        display: block;
+    }
 }
