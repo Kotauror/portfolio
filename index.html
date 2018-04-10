@@ -20,9 +20,9 @@
 
 <body>
 <div id="navbar"> </div>
-<id class="description">  </div>
+<div class="description">  </div>
   <div class="grid">
-    <div class="inner_grid"> <img src="public/me.png" class="img_of_me"> </div>
+    <div class="inner_grid"> <img src="images/me.png" class="img_of_me"> </div>
     <div class="inner_grid">
       <div class="about_me">
         <h2> \\ Hello and welcome to my portfolio! </h2><br>
@@ -33,9 +33,9 @@
       </div>
     </div>
     <div class="inner_grid">
-      <a href="https://github.com/Kotauror"><img src="public/github.png" class="img_link"></a>
-      <a href="https://www.linkedin.com/in/justyna-zygmunt/"><img src="public/linkedin.png" class="img_link"></a>
-      <a href="https://www.codewars.com/users/Kotauror"><img src="public/codewars.png" class="img_link"></a>
+      <a href="https://github.com/Kotauror"><img src="images/github.png" class="img_link"></a>
+      <a href="https://www.linkedin.com/in/justyna-zygmunt/"><img src="images/linkedin.png" class="img_link"></a>
+      <a href="https://www.codewars.com/users/Kotauror"><img src="images/codewars.png" class="img_link"></a>
     </div>
     <div class="inner_grid">
       <div class="skillset">
@@ -60,8 +60,44 @@
           <div class="practice tdd">TDD </div>
           <div class="practice solid">SOLID </div>
         </div>
+        <h2> \\ Some of my projects: </h2>
+        <br>
+        <div class=project_images>
+          <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+          <img class="projectPic bowling" src="images/bowl.png">
+          <img class="projectPic chitter" src="images/chit.png">
+          <img class="projectPic fridge" src="images/fridge.png">
+          <img class="projectPic cat" src="images/cat.png">
+          <img class="projectPic news" src="images/news.png">
+          <img class="projectPic rps" src="images/rps.png">
+        </div>
       </div>
     </div>
   </div>
+
+
+
+  <script>
+  var slideIndex = 1;
+
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+      showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("projectPic");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
 </body>
 </html>

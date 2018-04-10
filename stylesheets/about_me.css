@@ -80,6 +80,13 @@ h6 {
   box-shadow: 0px 0px 20px yellow;
 }
 
+.project_images {
+  width: 100%;
+}
+
+.project_images img {
+  width: inherit;
+}
 
 @media only screen and (max-width: 600px) {
     .grid {
